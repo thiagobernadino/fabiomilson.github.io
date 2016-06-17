@@ -1,0 +1,48 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Packtudo
+email: packtudo@gmail.com
+description: "Este é um site feito por desenvolvedor apaixonado por tecnologia com a intenção
+  de compartilhar todo o conhecimento adquirido por ele até então :)"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://packtudo.info" # the base hostname & protocol for your site
+twitter_username: packtudo
+github_url:  "https://github.com/fabiomilson"
+youtube_url: "http://youtube.com/packtudo"
+facebook_url: "https://www.facebook.com/fabiopacktudo"
+google_plus_url: "https://plus.google.com/113463276872649574744"
+permalink: "/:categories/:title/"
+host: 192.168.25.98
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+# Gems
+gems: [jekyll-paginate]
+paginate: 6
+paginate_path: "/page:num/"
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+ 
+# Sass
+sass:
+    style: compressed
+
+exclude: ["_dev",
+        "gulpfile.js",
+        "node_modules",
+        "package.json"]
+    

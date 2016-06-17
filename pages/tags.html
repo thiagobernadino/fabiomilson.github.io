@@ -1,0 +1,42 @@
+---
+layout: default
+title: Tags
+description: Procure os assuntos pelas tags usadas no blog.
+permalink: /tags/
+---
+<div>
+    <ul class="tags container" style="padding: 40px;margin-bottom: -90px;">
+    {% assign counter = 0 %}
+    {% for tag in site.tags %}
+    <li><a href="{{base.url}}/tags/#{{tag[0]}}" data-scroll>{{tag[0]}}<span>{{tag[1].size}}</span></a></li>
+    {% assign counter = 0 %}
+    {%endfor%}
+    </ul>
+</div>
+<div class="container">
+    {% for tag in site.tags  %}
+    <div id="{{tag[0]}}"><br><br><br></div>
+    <ul class="collection with-header">
+        <li class="collection-header" >
+            <h1>{{ tag[0] }}</h1>
+        </li>
+        {% assign pages_list = tag[1] %}
+            {% for post in pages_list reversed %}
+                {% if post.title != null %}
+                    {% if group == null or group == post.group %}
+                    <li>
+                        <a href="{{post.url}}" class="collection-item">{{post.title}}<i class="material-icons secondary-content">send</i></a>
+                    </li>
+                    {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% assign pages_list = nil %}
+        {% assign group = nil %}
+    </ul> 
+{% endfor %}
+ <div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a href="#header" class="btn-floating btn-large red" data-scroll>
+      <i class="large material-icons">navigation</i>
+    </a>
+  </div>
+  

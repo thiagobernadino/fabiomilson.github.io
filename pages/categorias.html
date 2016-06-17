@@ -1,0 +1,30 @@
+---
+layout: default
+title: Categorias
+description: Procure os assuntos pelas categorias usadas no blog.
+permalink: /categorias/
+---
+{% for category in site.categories  %}
+<div id="{{category[0]}}"><br><br><br></div>
+<div class="container">
+    <ul class="collection with-header">
+        <li class="collection-header" >
+            <h1>{{ category[0] }}</h1>
+        </li>
+        {% assign pages_list = category[1] %}
+            {% for post in pages_list reversed %}
+                {% if post.title != null %}
+                    {% if group == null or group == post.group %}
+                    <li>
+                        <a href="{{post.url}}" class="collection-item">{{post.title}}<i class="material-icons secondary-content">send</i></a>
+                    </li>
+                    {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% assign pages_list = nil %}
+        {% assign group = nil %}
+    </ul>
+</div>  
+{% endfor %}
+
+

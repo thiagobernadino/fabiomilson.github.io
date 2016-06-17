@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+    <div itemscope itemtype="http://schema.org/Article" class="section no-pad-bot">
+        {{content}}
+    </div>
+
+	<script src="{{"/js/materialize.min.js" | prepend: site.github.baseurl}}"></script>
+	<script src="{{"/js/init.js" | prepend: site.github.baseurl}}"></script>
+	<script src="{{"/js/plugins/smooth-scroll.js" | prepend: site.github.baseurl}}"></script>
+	<script src="{{"/js/plugins/detect-mobile.js" | prepend: site.github.baseurl}}"></script>
+	<script>
+	    smoothScroll.init();
+	</script>
+	<script type="text/javascript">
+	var color = $(".post-header").css("background-color");
+	if(!isMobile()){
+		$('.post-content > h1').css("color",color).css("transition","color 1s");
+		$('.post-content > h2').css("color",color).css("transition","color 1s");
+		$('.post-content > h3').css("color",color).css("transition","color 1s");
+		$('.post-content p').css("color","black").css("transition","color 1s");
+
+	}else{
+		$('.post-content > h1').css("color",color);
+		$('.post-content > h2').css("color",color);
+		$('.post-content > h3').css("color",color);
+		$('.post-content > p').css("color","black");
+	}
+	</script>
+  </body>
+
+</html>

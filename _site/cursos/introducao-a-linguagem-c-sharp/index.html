@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="l-UbdyRHWOj6SzgX0-k_50icWS0XE5Zcou3iWP3SmQ4" />
+  
+  <title>Introdução ao C#</title>
+
+  <meta name="description" content="Introdução a linguagem C">
+  
+  <link rel="author" href="https://plus.google.com/113463276872649574744?rel=author" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://packtudo.info/cursos/introducao-a-linguagem-c-sharp/">
+  <link rel="alternate" type="application/rss+xml" title="Packtudo" href="http://packtudo.info/feed.xml">
+  <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+  
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="fb:admins" content="100002892380354" />
+  <meta property="og:url" content="http://packtudo.info/cursos/introducao-a-linguagem-c-sharp/" />
+  <meta property="og:title" content="Introdução ao C#" />
+  <meta property="og:description" content="Este é um site feito por desenvolvedor apaixonado por tecnologia com a intenção de compartilhar todo o conhecimento adquirido por ele até então :)" />
+  <meta property="og:site_name" content="Packtudo" />
+  
+    <meta property="og:image" content="http://packtudo.info/img/post/tumbnails/c_sharp_default.png" />
+    
+
+  <script src="/js/jquery-2.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77044018-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+<!-- Titularidade do spider ad -->
+</head>
+
+
+  <body>
+    <header class="navbar-fixed" id="header">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+    <li class="divider"></li>
+  </ul>
+  
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+  </ul>
+  
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a itemprop="url" id="logo-container" href="http://packtudo.info" class="brand-logo uppercase">Início</a>
+    
+    <!-- Menu full -->
+     <ul class="right hide-on-med-and-down">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos" >Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais" >Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações" >Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown1">Faculdade<i class="material-icons right">arrow_drop_down</i></button></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();"><i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos">Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais">Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações">Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+    
+     
+      <a itemprop="url" href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>
+    <div itemscope itemtype="http://schema.org/Article" class="section no-pad-bot">
+        <div class="post-header purple darken-3">
+ 	<div class="col s12">
+	<p>
+ 		<time datetime="2016-06-04T22:56:21-03:00" itemprop="datePublished" class="post-meta">2016-06-04</time>
+  	</p>
+    <h1 class="header post-title text-shadown-bottom-right-purple darken-3" itemprop="name headline">Introdução ao C#</h1>
+    <p class="post-subtitle">A linguagem C# e o seu ambiente</p>
+    </div>
+ </div>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="container post-content" style="h1{color:purple darken-3;}" itemprop="articleBody">
+	    <h1 id="introduo-a-linguagem-c">Introdução a linguagem C</h1>
+
+<p>A linguagem C# e o framework .NET, são as tecnologias mais importantes para o mundo microsoft, e não ache que isso seja um exagero
+pois todo o ambiente Windows gira em torno dessas tecnologias. O Donet(.NET) foi criado para fornecer um grande ambiente de desenvolvimento
+lhe fornecendo opções para desenvolver praticamente qualquer coisa e executar o mesmo dentro do universo windows, embora o .NET
+seja especifico para a a linguagem C#, a própria linguagem consegue se extender juntamente a ele para fornecer WebPages dinâmicas, criar componentes
+para aplicações distribuidas e etc…</p>
+
+<h2 id="o-porque-da-plataforma-net-e-do-c">O Porque da plataforma .NET e do C</h2>
+
+<p>Para que possamos entender um e o outro, é necessário um entendimento prévio de que muitas tecnologias da plataforma Windows 
+não mundo com frequência, são sempre reaproveitadas, tanto que desde o Windows 3.1 em diante, o Windows matém a mesma <code class="highlighter-rouge">application programming interface</code> ( API ),
+com isso entendido, basicamente a plataforma .NET é o aglomerado dessas funções, melhoras passadas por “gerações” e também contendo em seu núcleo, novas funcionalidades,
+e o mesmo acontece com todas as outras tecnologias presentes no Windows, como o COM ( Component object model ), OLE(Object linking and Embedding) e derivados.</p>
+
+<blockquote>
+  <p>NOTA: Ao aprender a linguagem C#, caso já seja programador em alguma outra linguagem, inclusive linguagens mais antigas como VB e C++,
+perceberá logo de cara que programar em C# é mais agradável e intuitivo.</p>
+</blockquote>
+
+<h2 id="net">.NET?</h2>
+
+<p>Disse, disse, disse, mas no fundo…o que é esse tal de .NET?</p>
+
+<p>Para responder essa pergunta, devemos levar em consideração que o Windows é uma biblioteca rica em recursos, e todos esses recursos devem ser 
+catalogados e enfileirados para seu uso (Funções), e basicamente é isso que o .NET lhe fornece, um conjunto de funções para trabalhar com o Windows.</p>
+
+<p>Vejamos as vantagens da plataforma .NET:</p>
+
+<ul>
+  <li>Grande suporte para páginas WEB - Mesmo que o C# possa trabalhar com a tecnologia ASP, o .NET é extremamente flexível ao ponto de
+fornecer um suporte integrado bastente dinâmico para a sua aplicação.</li>
+</ul>
+
+<h2 id="ferramentas-para-os-posts">Ferramentas para os posts</h2>
+
+<p>O exemplos foram escritos dentro da IDE própria para o C# (Visual Studio.Net). É recomendável que você instale esta ferramenta 
+Microsoft oferece o Visual Studio Express Edition gratuitamente, está disponível em <a href="http://msdn.microsoft.com/vstudio/express/">http://msdn.microsoft.com/vstudio/express/</a>.</p>
+
+<p>Você precisará baixar e instalar o .NET Framework SDK, que pode ser obtido livremente <a href="https://www.microsoft.com/pt-br/download/details.aspx?id=42642">clicando aqui</a>. 
+Isto é necessário para executar os aplicativos .NET e, mais importante para nós, contém o compilador C# que você vai precisar para compilar os programas que você escreve.</p>
+
+<p>Finalmente, para usuários não-Windows, o <a href="http://www.monodevelop.com/">Projeto Mono</a> fornece um compilador open source C#, .NET Runtime e implementação da biblioteca. Para mais informações.</p>
+
+<h2 id="a-linguagem-c">A linguagem C</h2>
+
+<p>C# (pronuncia-se C-Sharp) é, sem dúvida, 
+a linguagem de escolha para trabalhar no ambiente .Net. 
+É uma nova linguagem livre da maldição de compatibilidade com versões anteriores e com um monte de recursos novos, excitantes e promissores. 
+É uma linguagem de programação orientada a objetos e tem em seu núcleo, muitas semelhanças com Java, C++ e VB. 
+Na verdade, C# combina a potência e eficiência do C ++, o design OO simples e limpa do Java e a simplificação da linguagem do Visual Basic.</p>
+
+<p>Como Java, C# também não permite herança múltipla ou o uso de ponteiros (em um código seguro), 
+mas fornece uma “recolha de lixo”(garbage memory collection) de memória em tempo de execução, o tipo e a verificação de acesso à memória. 
+No entanto, ao contrário do Java, C# mantém operações práticas únicas do C++ como sobrecarga de um operador, enumerações, diretivas de pré-processador, ponteiros 
+(em código não gerenciado / un-safe), ponteiros de função (na forma de delegates) e promete sempre possuir um template de apoio nas próximas versões. 
+Como VB, ele também suporta os conceitos de propriedades (context sensitive fields). 
+Além disso, C# vem com algumas características novas e emocionantes, como reflections, attributes, marshalling, remoting, threads, streams, data access com ADO.Net e muito mais.</p>
+
+<p>A arquitetura do .NET e o Framework .NET</p>
+
+<p>Na arquitetura .Net e o .Net Framework existem algumas diferentes e termos e conceitos importantes, que iremos discutir um por um:</p>
+
+<h3 id="common-language-runtime-clr">Common Language Runtime (CLR)</h3>
+
+<p>O conceito mais importante do .NET Framework é a existência e a funcionalidade do .NET Common Language Runtime (CLR), 
+também chamado de Net Runtime. 
+É uma camada que reside acima do OS e lida com a execução de todos os aplicativos .Net.
+ Nossos programas não se comunicam diretamente com o sistema operacional, mas passam pelo CLR:</p>
+
+<p><img src="/img/post/cursos/c_sharp/introducao/common_language_runtime.png" alt="Imagem que demonstra a CLR do .NET" class="responsive-img" /></p>
+
+<h3 id="msil-microsoft-intermediate-language-code">MSIL (Microsoft Intermediate Language) Code</h3>
+
+<p>Quando compilarmos nosso Programa .Net usando a linguagem .Net, qualquer uma compatível (como C#, VB.Net ou C ++, .Net) nosso código fonte não é convertido em código binário executável, 
+mas sim para um código intermediário conhecido como MSIL que é interpretado pela Common Language Runtime. 
+MSIL é o sistema, é um código independente de hardware para funcionar. Após a execução do programa, neste MSIL (código intermediário) é convertido em código executável binário (código nativo).</p>
+
+<p><img src="/img/post/cursos/c_sharp/introducao/demo_msil.png" alt="Imagem que demonstra a CLR do .NET" class="responsive-img" /></p>
+
+<h2 id="just-in-time-compilers-jiters">Just In Time Compilers (JITers)</h2>
+
+<p>Quando o nosso código compilado IL precisa ser executado, o CLR chama o compilador JIT, que compila o código IL para um código executável nativo (.exe ou .dll) 
+que é projetado para a máquina específica e o seu OS. JITers são diferentes dos compiladores tradicionais, eles compilam o IL para código nativo apenas quando desejado;
+ por exemplo, quando a função é chamada, o IL converte em tempo de execução o chamado. Assim, a parte do código que não é usada por que não é necessária naquele momento nunca é convertida em código nativo. 
+ Se algum código IL é convertido em código nativo, então da próxima vez que for necessário usar, o CLR reutilizará o mesmo (já compilado) sem que haja uma re-compilação. 
+ Assim, se um programa é executado por algum tempo (assumindo que todas ou a maioria das funções são chamadas o tempo inteiro), então não irá ter nenhuma perda de desempenho, just-in-time.</p>
+
+<p>Como JITers estão sempre cientes do processador e sistema operacional específico que estão sendo executados em tempo real, eles podem otimizar o código de forma extremamente eficiente, 
+resultando em aplicações muito robustas. Além disso, como um compilador JIT sabe o estado atual exato do código executável, 
+eles também podem otimizar o código em pequenas chamadas de função (como a substituição do corpo de uma pequena função que possua um loop, economizando tempo em sua chamada de função). 
+Embora a Microsoft afirmou que o C# e .Net não estão competindo com linguagens como C++ na eficiência e rapidez de execução, 
+JITers podem tornar seu código mais rápido do que o código escrito em C++ em alguns casos.</p>
+
+<h2 id="continua">Continua…</h2>
+
+<p>Então, o que achou do post? fiquem ligados no <a href="/cursos/introducao-a-linguagem-c-sharp-parte-2/">próximo post</a> e deixe o seu comentário abaixo :).</p>
+
+	</div>
+<footer class="post-footer purple darken-3 text-shadown-bottom-purple darken-3 border-black">
+	<div class="container">
+		<h2 class="post-title text-shadown-bottom-right-purple darken-3">Gostou do blog?</h2>
+		<p class="post-subtitle">Faça uma doação e me ajude a manter as postagens frequentes <3</p>
+		<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+		<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+		<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+		<input type="hidden" name="currency" value="BRL" />
+		<input type="hidden" name="receiverEmail" value="packtudo@gmail.com" />
+		<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/205x30-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+		</form>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+	</div>
+</footer>
+<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+		    this.page.url = 'http://packtudo.info/cursos/introducao-a-linguagem-c-sharp/';  // Replace PAGE_URL with your page's canonical URL variable
+		     his.page.identifier = '/cursos/introducao-a-linguagem-c-sharp/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		 };	
+		 (function() {  // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+		        
+		     s.src = '//packtudo.disqus.com/embed.js';
+		        
+		    s.setAttribute('data-timestamp', +new Date());
+		    (d.head || d.body).appendChild(s);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+    </div>
+
+	<script src="/js/materialize.min.js"></script>
+	<script src="/js/init.js"></script>
+	<script src="/js/plugins/smooth-scroll.js"></script>
+	<script src="/js/plugins/detect-mobile.js"></script>
+	<script>
+	    smoothScroll.init();
+	</script>
+	<script type="text/javascript">
+	var color = $(".post-header").css("background-color");
+	if(!isMobile()){
+		$('.post-content > h1').css("color",color).css("transition","color 1s");
+		$('.post-content > h2').css("color",color).css("transition","color 1s");
+		$('.post-content > h3').css("color",color).css("transition","color 1s");
+		$('.post-content p').css("color","black").css("transition","color 1s");
+
+	}else{
+		$('.post-content > h1').css("color",color);
+		$('.post-content > h2').css("color",color);
+		$('.post-content > h3').css("color",color);
+		$('.post-content > p').css("color","black");
+	}
+	</script>
+  </body>
+
+</html>

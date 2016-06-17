@@ -1,0 +1,64 @@
+
+
+.project-name {
+  text-align: center;
+  padding: 10px 0;
+}	
+
+// Header
+header {	
+	background: $secondary-color;
+	padding: 10px;
+	@include prefix(box-shadow, 0 3px 3px rgba(0,0,0,0.05)); 
+	@extend %clearfix;
+
+	.logo {
+		color: $primary-color;
+		float: left;
+		font:{
+			family: $base-font-title;
+			size: 22px;
+			weight: 600;
+		}
+		
+		> span {
+			color: lighten($primary-color, 20%);
+			font-weight: 500;
+		}
+	}
+
+	.social {
+		float: right;
+		.btn {
+			font: {
+				family: "Dosis";
+				weight: 600;
+				size: 14px;
+			}
+			margin: 10px 5px;
+		}
+	}
+}
+
+// Buttons
+.btn {
+	padding: 5px 15px;
+	text-decoration: none;
+	background: transparent;
+	border: 2px solid lighten($primary-color, 10%);
+	color: lighten($primary-color, 10%);
+	display: inline-block;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 12px;
+	@include prefix(border-radius, 5px);
+	@include prefix(transition, background .3s ease);
+	@include prefix(box-shadow, 2px 2px 0 lighten($primary-color, 10%));
+
+	&:hover {
+		box-shadow: none ;
+		top: 2px;
+		left: 2px;
+		@include prefix(box-shadow, 2px 2px 0 transparent);
+	}
+}

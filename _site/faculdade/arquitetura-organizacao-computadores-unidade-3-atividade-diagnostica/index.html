@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="l-UbdyRHWOj6SzgX0-k_50icWS0XE5Zcou3iWP3SmQ4" />
+  
+  <title>AOC - U3S1 - Atividade Diagnóstica</title>
+
+  <meta name="description" content="U3S1 - Atividade Diagnóstica - Unidade 3">
+  
+  <link rel="author" href="https://plus.google.com/113463276872649574744?rel=author" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://packtudo.info/faculdade/arquitetura-organizacao-computadores-unidade-3-atividade-diagnostica/">
+  <link rel="alternate" type="application/rss+xml" title="Packtudo" href="http://packtudo.info/feed.xml">
+  <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+  
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="fb:admins" content="100002892380354" />
+  <meta property="og:url" content="http://packtudo.info/faculdade/arquitetura-organizacao-computadores-unidade-3-atividade-diagnostica/" />
+  <meta property="og:title" content="AOC - U3S1 - Atividade Diagnóstica" />
+  <meta property="og:description" content="Este é um site feito por desenvolvedor apaixonado por tecnologia com a intenção de compartilhar todo o conhecimento adquirido por ele até então :)" />
+  <meta property="og:site_name" content="Packtudo" />
+  
+    <meta property="og:image" content="http://packtudo.info/img/blog-image.png" />
+  
+
+  <script src="/js/jquery-2.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77044018-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+<!-- Titularidade do spider ad -->
+</head>
+
+
+  <body>
+    <header class="navbar-fixed" id="header">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+    <li class="divider"></li>
+  </ul>
+  
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+  </ul>
+  
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a itemprop="url" id="logo-container" href="http://packtudo.info" class="brand-logo uppercase">Início</a>
+    
+    <!-- Menu full -->
+     <ul class="right hide-on-med-and-down">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos" >Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais" >Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações" >Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown1">Faculdade<i class="material-icons right">arrow_drop_down</i></button></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();"><i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos">Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais">Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações">Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+    
+     
+      <a itemprop="url" href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>
+    <div itemscope itemtype="http://schema.org/Article" class="section no-pad-bot">
+        <div class="post-header orange">
+ 	<div class="col s12">
+	<p>
+ 		<time datetime="2016-05-19T15:17:21-03:00" itemprop="datePublished" class="post-meta">2016-05-19</time>
+  	</p>
+    <h1 class="header post-title text-shadown-bottom-right-orange" itemprop="name headline">AOC - U3S1 - Atividade Diagnóstica</h1>
+    <p class="post-subtitle">Arquitetura e organização de computadores - Unidade 3</p>
+    </div>
+ </div>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="container post-content" style="h1{color:orange;}" itemprop="articleBody">
+	    <h1 id="u3s1---atividade-diagnstica---unidade-3">U3S1 - Atividade Diagnóstica - Unidade 3</h1>
+
+<h2 id="para-estudo-complementar-organizao-e-arquitetura-de-computadores">Para estudo complementar Organização e Arquitetura de computadores</h2>
+
+<p><strong>1)</strong>Um byte é formado por:</p>
+
+<p>Escolha uma:</p>
+
+<ul>
+  <li>a. Um conjunto de 12 bits.</li>
+  <li>b. Um conjunto de 10 bits.</li>
+  <li>c. Um conjunto de 4 bits.</li>
+  <li>d. Um conjunto chamado nibble.</li>
+  <li>e. Um conjunto de 8 bits.</li>
+</ul>
+
+<blockquote>
+  <p>Os números binários são escritos com os símbolos 0 e 1 e representados com
+a base 2. Veja o exemplo:
+a. 001101112
+ Chegamos a um número binário pela soma de produtos de
+potência de 2. Veja:</p>
+</blockquote>
+
+<ul>
+  <li>(0 * 27) + (0 * 26) + (1 * 25) + (1 * 24) + (0 * 23
+) + (1 * 22
+) + (1 * 21
+) + (1 * 20) = 55
+em decimal
+Neste exemplo acima temos números binários que são chamados de bits
+– Binary Digit). Esse conjunto de 8 bits forma 1 byte</li>
+</ul>
+
+<blockquote>
+  <p><strong class="orange">Correto: e. Um conjunto de 8 bits.</strong></p>
+</blockquote>
+
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Anuncio Index Page -->
+<p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7123972893709158" data-ad-slot="2188606626" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<p><strong>2)</strong>Marque a alternativa de numeração em octal:</p>
+
+<p>Escolha uma:</p>
+
+<ul>
+  <li>a. FA316</li>
+  <li>b. 5212</li>
+  <li>c. 13228</li>
+  <li>d. 32A16</li>
+  <li>e. 2110</li>
+</ul>
+
+<blockquote>
+  <p>Base 8;</p>
+</blockquote>
+
+<blockquote>
+  <p><strong class="orange">Correto: c. 13228</strong></p>
+</blockquote>
+
+<p><strong>3)</strong>Qual é a representação matemática correta para o número decimal 1352?</p>
+
+<p>Escolha uma:</p>
+
+<ul>
+  <li>a. (1 x 103) + (3 x 102) + (5 x 101) + (2 x 100)</li>
+  <li>b. (1 x 103) + (3 x 101) + (5 x 101) + (2 x 100)</li>
+  <li>c. (1 x 102) + (3 x 101) + (2 x 100)</li>
+  <li>d. (1 x 104) + (1 x 102) + (3 x 101) + (2 x 100)</li>
+  <li>e. (1 x 102) + (3 x 101) + (2 x 100) + (2 x 10-1)</li>
+</ul>
+
+<blockquote>
+  <p>Porque sim</p>
+</blockquote>
+
+<blockquote>
+  <p><strong class="orange">Correto: a. (1 x 103) + (3 x 102) + (5 x 101) + (2 x 100)</strong></p>
+</blockquote>
+
+	</div>
+<footer class="post-footer orange text-shadown-bottom-orange border-black">
+	<div class="container">
+		<h2 class="post-title text-shadown-bottom-right-orange">Gostou do blog?</h2>
+		<p class="post-subtitle">Faça uma doação e me ajude a manter as postagens frequentes <3</p>
+		<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+		<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+		<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+		<input type="hidden" name="currency" value="BRL" />
+		<input type="hidden" name="receiverEmail" value="packtudo@gmail.com" />
+		<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/205x30-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+		</form>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+	</div>
+</footer>
+<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+		    this.page.url = 'http://packtudo.info/faculdade/arquitetura-organizacao-computadores-unidade-3-atividade-diagnostica/';  // Replace PAGE_URL with your page's canonical URL variable
+		     his.page.identifier = '/faculdade/arquitetura-organizacao-computadores-unidade-3-atividade-diagnostica/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		 };	
+		 (function() {  // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+		        
+		     s.src = '//packtudo.disqus.com/embed.js';
+		        
+		    s.setAttribute('data-timestamp', +new Date());
+		    (d.head || d.body).appendChild(s);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+    </div>
+
+	<script src="/js/materialize.min.js"></script>
+	<script src="/js/init.js"></script>
+	<script src="/js/plugins/smooth-scroll.js"></script>
+	<script src="/js/plugins/detect-mobile.js"></script>
+	<script>
+	    smoothScroll.init();
+	</script>
+	<script type="text/javascript">
+	var color = $(".post-header").css("background-color");
+	if(!isMobile()){
+		$('.post-content > h1').css("color",color).css("transition","color 1s");
+		$('.post-content > h2').css("color",color).css("transition","color 1s");
+		$('.post-content > h3').css("color",color).css("transition","color 1s");
+		$('.post-content p').css("color","black").css("transition","color 1s");
+
+	}else{
+		$('.post-content > h1').css("color",color);
+		$('.post-content > h2').css("color",color);
+		$('.post-content > h3').css("color",color);
+		$('.post-content > p').css("color","black");
+	}
+	</script>
+  </body>
+
+</html>

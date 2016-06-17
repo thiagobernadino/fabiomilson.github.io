@@ -1,0 +1,121 @@
+---
+layout: default
+---
+
+<div class="container">
+  <br><br>
+  <h1 class="index-title-header center orange-text">&lt; Fabio_Packtudo /&gt;</h1>
+  <div class="row center">
+    <h5 class="header col s12 light">Blog de um programador amante da tecnologia &#10084;</h5>
+    <h5 class="header col s12 light">Ps: O blog está em constante manutenção (ಥ⌣ಥ)</h5>
+  </div>
+  <div class="row center">
+    <a data-scroll href="#cards" class="btn-large waves-effect waves-light orange index-button">Pular para os cards</a>
+  </div>
+  <br><br>
+
+</div>
+
+<div class="container">
+  <div class="section" >
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+          <h5 class="center">Técnicas de Programação</h5>
+          <p class="light">Enquanto você lê esse pequeno bloco de texto, eu já fui capaz de desenvolver 5 Apps híbridos ao estilo Chuck Norris I'm a Big Boss ٩(╬ʘ益ʘ╬)۶, quer se tornar um Big Boss também? Pois me siga em minhas <a data-scroll href="#footer">redes sociais</a> rapá!.</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+          <h5 class="center">Foco no usuário</h5>
+
+          <p class="light">Sempre, sempre, sempreeeeeeeeeee pense no usuário quando você estiver desenvolvendo qualquer coisa, literalmente qualquer coisa, e nem vem com o mimi de que no momento em que você pensa mais em outre'm, mais trabalho terá, mas é óbvio tudo bem feito da trabalho, certo?</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+          <h5 class="center">Trabalho com eficácia e eficiência</h5>
+
+          <p class="light">Se você leu o primeiro bloquinho a sua esquerda <- deve ter pensado - "Nunca que esse cara desenvolveu 5 apps em tão pouco tempo" - digo que estás corretíssimo, mas que tal um App completo para Android, Windows Phone e IOs em 4 horas?, surpreso ? que tal começar lendo esse post e se tornar mais eficiente em seu trabalho? .</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+<div id="cards"></div>
+<br><br><br><br>
+<ul class="tags container">
+{% for tag in site.tags %}
+  <li><a href="{{base.url}}/tags/#{{tag[0]}}">{{tag[0]}}<span>{{tag[1].size}}</span></a></li>
+{%endfor%}
+</ul>
+<div class="row">
+  {%for post in paginator.posts %}
+    <div class="col s12 m12 l6">
+      <div class="card {{post.color}}">
+        <div class="card-content white-text">
+          <span class="card-title">{{post.title}}</span>
+          <p>{{post.summary}}</p>
+        </div>
+        <div class="card-action">
+          <a href="{{post.url}}" class="waves-effect waves-light btn btn-open-post cyan darken-1"><i class="material-icons right">launch</i>Ler sobre</a></a>
+          <a class="waves-effect waves-light btn btn-floating float-right btn-share"><i class="material-icons right">share</i>Compartilhar</a></a>  
+          <ul>
+            <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{post.url}}" 
+              class="btn-share-social waves-effect waves-light btn-floating float-right">
+              <img src="{{base.url}}/img/icons/facebook_icon.png">
+            </a>
+            </li>
+            
+            <li>
+            <a target="_blank" href="https://twitter.com/home?status=Gostei%20de%20um%20post%20do%20%40packtudo%20{{site.url}}{{post.url}}" class="btn-share-social waves-effect waves-light btn btn-floating float-right">
+              <img src="{{base.url}}/img/icons/twitter_icon.png">
+            </a>
+            </li>
+            <li>
+            <a target="_blank" href="https://plus.google.com/share?url={{site.url}}{{post.url}}" class="btn-share-social waves-effect waves-light btn btn-floating float-right">
+              <img src="{{base.url}}/img/icons/google_plus_icon.png">
+            </a>
+            </li>
+            <li>
+            <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{post.url}}&title={{post.title}}&summary={{post.summary}}&source={{site.url}}" class="btn-share-social waves-effect waves-light btn btn-floating float-right">
+              <img src="{{base.url}}/img/icons/linkedin_icon.png">
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  {%endfor%}
+</div>
+  {% if paginator.total_pages > 1 %}
+    <ul class="pagination center">
+    {% if paginator.previous_page %}
+      <li class="active"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}#cards"><i class="material-icons">chevron_left</i></a></li>
+    {% else %}
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    {% endif %}
+      <li class="active"><a href="#!">{{ paginator.page }} of {{ paginator.total_pages }}</a></li>
+    {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}/#cards"><li class="waves-effect active"><i class="material-icons white-text">chevron_right</i></li></a>
+    {% else %}
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    {% endif %}
+    </ul>
+  {% endif %}
+
+<script>
+$(".btn-share").click(function(){
+  $(this).parent().find(".btn-share-social").toggle();
+});
+</script>

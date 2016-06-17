@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="l-UbdyRHWOj6SzgX0-k_50icWS0XE5Zcou3iWP3SmQ4" />
+  
+  <title>Criando aplicativos para celular - Parte 1</title>
+
+  <meta name="description" content="Introdução">
+  
+  <link rel="author" href="https://plus.google.com/113463276872649574744?rel=author" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://packtudo.info/cursos/criando-um-aplicativo-para-celular-com-cordova-parte-1/">
+  <link rel="alternate" type="application/rss+xml" title="Packtudo" href="http://packtudo.info/feed.xml">
+  <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+  
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="fb:admins" content="100002892380354" />
+  <meta property="og:url" content="http://packtudo.info/cursos/criando-um-aplicativo-para-celular-com-cordova-parte-1/" />
+  <meta property="og:title" content="Criando aplicativos para celular - Parte 1" />
+  <meta property="og:description" content="Este é um site feito por desenvolvedor apaixonado por tecnologia com a intenção de compartilhar todo o conhecimento adquirido por ele até então :)" />
+  <meta property="og:site_name" content="Packtudo" />
+  
+    <meta property="og:image" content="http://packtudo.info/img/post/tumbnails/cordova_default.png" />
+    
+
+  <script src="/js/jquery-2.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77044018-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+<!-- Titularidade do spider ad -->
+</head>
+
+
+  <body>
+    <header class="navbar-fixed" id="header">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+    <li class="divider"></li>
+  </ul>
+  
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+  </ul>
+  
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a itemprop="url" id="logo-container" href="http://packtudo.info" class="brand-logo uppercase">Início</a>
+    
+    <!-- Menu full -->
+     <ul class="right hide-on-med-and-down">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos" >Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais" >Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações" >Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown1">Faculdade<i class="material-icons right">arrow_drop_down</i></button></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();"><i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos">Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais">Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações">Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+    
+     
+      <a itemprop="url" href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>
+    <div itemscope itemtype="http://schema.org/Article" class="section no-pad-bot">
+        <div class="post-header cyan  darken-4">
+ 	<div class="col s12">
+	<p>
+ 		<time datetime="2016-05-16T22:51:32-03:00" itemprop="datePublished" class="post-meta">2016-05-16</time>
+  	</p>
+    <h1 class="header post-title text-shadown-bottom-right-cyan  darken-4" itemprop="name headline">Criando aplicativos para celular - Parte 1</h1>
+    <p class="post-subtitle">Começando a criar um app com Cordova</p>
+    </div>
+ </div>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="container post-content" style="h1{color:cyan  darken-4;}" itemprop="articleBody">
+	    <h1 id="introduo">Introdução</h1>
+
+<p>Então pessoal vamos criar um aplicativo completo para celular utilizando somente HTML, CSS e Javascript como base?</p>
+
+<p>Se a sua resposta foi sim, prossigamos, caso contrário fico triste em não poder lhe ajudar :/</p>
+
+<p>Então chega de enrolação e mão na massa !</p>
+
+<h2 id="o-que-ser-necessrio">O que será necessário?</h2>
+
+<p>Seguinte, irei assumir durante todo o “curso” que você já saiba HTML, CSS e Javascript, ao menos o básico, e que saiba se virar,
+com isso fique claro que iremos usar o CORDOVA / PHONEGAP para dar a luz ao nosso aplicativo ( Que irei chamar carinhosamente de
+App), ficando transparente isso para você, vamos para a instalação do Cordova na nossa máquina, lembrando que todo o desenvolvimento
+será na plataforma Windows.</p>
+
+<h2 id="instalao-do-cordova-no-windows">Instalação do cordova no windows</h2>
+
+<p>Então, como instalar o cordova no windows?</p>
+
+<p>O cordova é instalado através de linhas de comandos pelo nosso querido CMD, mas para iniciar a instalação, de ante-mão devemos ter 
+instalado em nossa máquina o <a href="https://nodejs.org/en/download/" class="external-link">Node.js</a> que pode ser adquirido facilmente 
+<a href="https://nodejs.org/en/download/" class="external-link">pelo seu site oficial</a>, baixe a versão LTS - Recommend For Most Users que vai
+ficar tudo bem, e claro em seguida instale-o.</p>
+
+<blockquote>
+  <p>Nota: Ao instalar o Node.js, certifique-se de que na parte onde diz “Custom Setup” de marcar todas as opções para a instalação
+inclusive a <code class="highlighter-rouge">Add to Path</code> e a <code class="highlighter-rouge">npm package manager</code>.</p>
+</blockquote>
+
+<p>Com o Node.js instalado, agora basta abrir o CMD ( Prompt de comando do windows ), como Administrador ou normal mesmo, eu prefiro como Administrador so para garantir a execução 
+das tarefas, e em seguida usar o comando <code class="highlighter-rouge">npm install -g cordova</code> 
+isso irá demorar um pouco, mas logo logo a instalação será concluida, caso de algum erro como “NPM não foi reconhecido como um comando válido” reinicie o computador e 
+faça o teste novamente.</p>
+
+<blockquote>
+  <p>Nota
+- No OSX ou Linux basta usar o <code class="highlighter-rouge">sudo</code> antes do comando npm para fazer a instalação.
+- A <code class="highlighter-rouge">flag -g</code> depois do <code class="highlighter-rouge">npm install</code> indica para o npm que o cordova deve ser instalado de forma global, caso contrário o cordova seria instalado na pasta <code class="highlighter-rouge">node_modules</code> do Node.js
+ em questão.
+- Para se certificar de que o <code class="highlighter-rouge">cordova</code> foi instalado, vá no seu terminal / prompt e execute o comando <code class="highlighter-rouge">cordova</code> e veja se o resultado será o <code class="highlighter-rouge">help text</code>, caso contrário
+ comece a rezar o pai nosso e duas avemarias e em seguida deixe um comentário no post.</p>
+</blockquote>
+
+<h2 id="concluso">Conclusão</h2>
+
+<p>Com isso pessoal, finalizamos a primeira parte, que nada mais é que a forma de se instalar o Cordova em suas máquinas, então até a prôxima e não deixe de acompanhar 
+o <a href="http://youtube.com/packtudo">meu canal no Youtube</a>.</p>
+
+
+	</div>
+<footer class="post-footer cyan  darken-4 text-shadown-bottom-cyan  darken-4 border-black">
+	<div class="container">
+		<h2 class="post-title text-shadown-bottom-right-cyan  darken-4">Gostou do blog?</h2>
+		<p class="post-subtitle">Faça uma doação e me ajude a manter as postagens frequentes <3</p>
+		<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+		<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+		<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+		<input type="hidden" name="currency" value="BRL" />
+		<input type="hidden" name="receiverEmail" value="packtudo@gmail.com" />
+		<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/205x30-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+		</form>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+	</div>
+</footer>
+<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+		    this.page.url = 'http://packtudo.info/cursos/criando-um-aplicativo-para-celular-com-cordova-parte-1/';  // Replace PAGE_URL with your page's canonical URL variable
+		     his.page.identifier = '/cursos/criando-um-aplicativo-para-celular-com-cordova-parte-1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		 };	
+		 (function() {  // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+		        
+		     s.src = '//packtudo.disqus.com/embed.js';
+		        
+		    s.setAttribute('data-timestamp', +new Date());
+		    (d.head || d.body).appendChild(s);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+    </div>
+
+	<script src="/js/materialize.min.js"></script>
+	<script src="/js/init.js"></script>
+	<script src="/js/plugins/smooth-scroll.js"></script>
+	<script src="/js/plugins/detect-mobile.js"></script>
+	<script>
+	    smoothScroll.init();
+	</script>
+	<script type="text/javascript">
+	var color = $(".post-header").css("background-color");
+	if(!isMobile()){
+		$('.post-content > h1').css("color",color).css("transition","color 1s");
+		$('.post-content > h2').css("color",color).css("transition","color 1s");
+		$('.post-content > h3').css("color",color).css("transition","color 1s");
+		$('.post-content p').css("color","black").css("transition","color 1s");
+
+	}else{
+		$('.post-content > h1').css("color",color);
+		$('.post-content > h2').css("color",color);
+		$('.post-content > h3').css("color",color);
+		$('.post-content > p').css("color","black");
+	}
+	</script>
+  </body>
+
+</html>

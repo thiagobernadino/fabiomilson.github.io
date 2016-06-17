@@ -1,0 +1,173 @@
+/**
+ * Syntax highlighter-rougeing styles
+ */
+
+.highlighter-rouge table td { padding: 5px; }
+.highlighter-rouge table pre { margin: 0; }
+.highlighter-rouge {
+  color: #faf6e4;
+  background-color: #122b3b;
+}
+.highlighter-rouge .gl {
+  color: #dee5e7;
+  background-color: #4e5d62;
+}
+.highlighter-rouge .c, .highlighter-rouge .cd, .highlighter-rouge .cm, .highlighter-rouge .c1, .highlighter-rouge .cs {
+  color: #6c8b9f;
+  font-style: italic;
+}
+.highlighter-rouge .cp {
+  color: #b2fd6d;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlighter-rouge .err {
+  color: #fefeec;
+  background-color: #cc0000;
+}
+.highlighter-rouge .gr {
+  color: #fefeec;
+  background-color: #cc0000;
+}
+.highlighter-rouge .k, .highlighter-rouge .kd, .highlighter-rouge .kv {
+  color: #f6dd62;
+  font-weight: bold;
+}
+.highlighter-rouge .o, .highlighter-rouge .ow {
+  color: #4df4ff;
+}
+.highlighter-rouge .p, .highlighter-rouge .pi {
+  color: #4df4ff;
+}
+.highlighter-rouge .gd {
+  color: #cc0000;
+}
+.highlighter-rouge .gi {
+  color: #b2fd6d;
+}
+.highlighter-rouge .ge {
+  font-style: italic;
+}
+.highlighter-rouge .gs {
+  font-weight: bold;
+}
+.highlighter-rouge .gt {
+  color: #dee5e7;
+  background-color: #4e5d62;
+}
+.highlighter-rouge .kc {
+  color: #f696db;
+  font-weight: bold;
+}
+.highlighter-rouge .kn {
+  color: #ffb000;
+  font-weight: bold;
+}
+.highlighter-rouge .kp {
+  color: #ffb000;
+  font-weight: bold;
+}
+.highlighter-rouge .kr {
+  color: #ffb000;
+  font-weight: bold;
+}
+.highlighter-rouge .gh {
+  color: #ffb000;
+  font-weight: bold;
+}
+.highlighter-rouge .gu {
+  color: #ffb000;
+  font-weight: bold;
+}
+.highlighter-rouge .kt {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlighter-rouge .no {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlighter-rouge .nc {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlighter-rouge .nd {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlighter-rouge .nn {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlighter-rouge .bp {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlighter-rouge .ne {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+.highlighter-rouge .nl {
+  color: #ffb000;
+  font-weight: bold;
+}
+.highlighter-rouge .nt {
+  color: #ffb000;
+  font-weight: bold;
+}
+.highlighter-rouge .m, .highlighter-rouge .mf, .highlighter-rouge .mh, .highlighter-rouge .mi, .highlighter-rouge .il, .highlighter-rouge .mo, .highlighter-rouge .mb, .highlighter-rouge .mx {
+  color: #f696db;
+  font-weight: bold;
+}
+.highlighter-rouge .ld {
+  color: #f696db;
+  font-weight: bold;
+}
+.highlighter-rouge .ss {
+  color: #f696db;
+  font-weight: bold;
+}
+.highlighter-rouge .s, .highlighter-rouge .sb, .highlighter-rouge .sd, .highlighter-rouge .s2, .highlighter-rouge .sh, .highlighter-rouge .sx, .highlighter-rouge .sr, .highlighter-rouge .s1 {
+  color: #fff0a6;
+  font-weight: bold;
+}
+.highlighter-rouge .se {
+  color: #4df4ff;
+  font-weight: bold;
+}
+.highlighter-rouge .sc {
+  color: #4df4ff;
+  font-weight: bold;
+}
+.highlighter-rouge .si {
+  color: #4df4ff;
+  font-weight: bold;
+}
+.highlighter-rouge .nb {
+  font-weight: bold;
+}
+.highlighter-rouge .ni {
+  color: #999999;
+  font-weight: bold;
+}
+.highlighter-rouge .w {
+  color: #BBBBBB;
+}
+.highlighter-rouge .nf {
+  color: #a8e1fe;
+}
+.highlighter-rouge .py {
+  color: #a8e1fe;
+}
+.highlighter-rouge .na {
+  color: #a8e1fe;
+}
+.highlighter-rouge .nv, .highlighter-rouge .vc, .highlighter-rouge .vg, .highlighter-rouge .vi {
+  color: #a8e1fe;
+  font-weight: bold;
+}
+pre {
+  padding: 15px;
+  line-height: 15px;
+  font-family: 'Ubuntu Mono', 'Monaco', monospace;
+}

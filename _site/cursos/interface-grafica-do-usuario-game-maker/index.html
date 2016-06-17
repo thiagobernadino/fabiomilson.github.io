@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="l-UbdyRHWOj6SzgX0-k_50icWS0XE5Zcou3iWP3SmQ4" />
+  
+  <title>Trabalhando com GUI</title>
+
+  <meta name="description" content="Game Maker - Interface Gráfica do Usuário (GUI)">
+  
+  <link rel="author" href="https://plus.google.com/113463276872649574744?rel=author" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://packtudo.info/cursos/interface-grafica-do-usuario-game-maker/">
+  <link rel="alternate" type="application/rss+xml" title="Packtudo" href="http://packtudo.info/feed.xml">
+  <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+  
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="fb:admins" content="100002892380354" />
+  <meta property="og:url" content="http://packtudo.info/cursos/interface-grafica-do-usuario-game-maker/" />
+  <meta property="og:title" content="Trabalhando com GUI" />
+  <meta property="og:description" content="Este é um site feito por desenvolvedor apaixonado por tecnologia com a intenção de compartilhar todo o conhecimento adquirido por ele até então :)" />
+  <meta property="og:site_name" content="Packtudo" />
+  
+    <meta property="og:image" content="http://packtudo.info/img/post/tumbnails/game_maker_default.png" />
+    
+
+  <script src="/js/jquery-2.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77044018-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+<!-- Titularidade do spider ad -->
+</head>
+
+
+  <body>
+    <header class="navbar-fixed" id="header">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+    <li class="divider"></li>
+  </ul>
+  
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+  </ul>
+  
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a itemprop="url" id="logo-container" href="http://packtudo.info" class="brand-logo uppercase">Início</a>
+    
+    <!-- Menu full -->
+     <ul class="right hide-on-med-and-down">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos" >Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais" >Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações" >Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown1">Faculdade<i class="material-icons right">arrow_drop_down</i></button></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();"><i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos">Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais">Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações">Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+    
+     
+      <a itemprop="url" href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>
+    <div itemscope itemtype="http://schema.org/Article" class="section no-pad-bot">
+        <div class="post-header green">
+ 	<div class="col s12">
+	<p>
+ 		<time datetime="2016-05-28T16:44:21-03:00" itemprop="datePublished" class="post-meta">2016-05-28</time>
+  	</p>
+    <h1 class="header post-title text-shadown-bottom-right-green" itemprop="name headline">Trabalhando com GUI</h1>
+    <p class="post-subtitle">Trabalhando com interface gráfica do usuário</p>
+    </div>
+ </div>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="container post-content" style="h1{color:green;}" itemprop="articleBody">
+	    <h1 id="game-maker---interface-grfica-do-usurio-gui">Game Maker - Interface Gráfica do Usuário (GUI)</h1>
+
+<p>Então pessoal ao iniciar Game Maker: Studio será mostrado a seguinte tela:
+<img src="/img/post/game_maker/loadupscreen.png" alt="Imagem que demonstra abertura inicial do game maker" class="responsive-img" /></p>
+
+<p>Na parte superior da tela de start-up geral, você pode ver que há nove guias: Welcome(Bem vindo), Abrir ( Open), Novo(New), Importação(Import), Notas da Versão(Release Notes), Demonstrações(Demos), Tutoriais(Tutorials), Novidades(News) e Licenças(Licenses).</p>
+
+<p>Logo abaixo encontrará um breve resumo da função de cada uma dessas guias:</p>
+
+<p><strong>Welcome(Bem-vindo)</strong>: Esta é a tela de inicialização que você vê quando abre GameMaker: Studio. Logo Abaixo você tem uma lista de arquivos abertos anteriormente(Projetos).</p>
+
+<p><strong>Open(Abrir)</strong>: Aqui você pode procurar no computador para abrir arquivos(Projetos).</p>
+
+<p><strong>New(Novo)</strong>: Esta opção vai pedir para você selecionar o diretório que você deseja usar para um novo projeto e solicitará que você digite um nome para este projeto, que é então guardado e aberto no GameMaker: Studio.</p>
+
+<p><strong>Import(Importação)</strong>: Com essa opção você pode carregar os arquivos * projeto .gmz comprimido e também importar arquivos de jogos criados com outras versões do GameMaker, incluindo GameMaker 6 (* .gm6), GameMaker 7 e 8 (* .gmk e * .gm81), bem como GameMaker 8,1 (* .gm81) e arquivos muito mais velhos (* .gmd). Nota-se, que os arquivos mais velho é menos provável que eles vá funcionar com toda sua funcionalidade devido às mudanças feitas no GameMaker ao longo dos anos. Além disso, você pode carregar arquivos de backup GameMaker (* .gb1, * .gb2 etc) a partir desta guia também.</p>
+
+<p><strong>Release Notes(Notas de Lançamento)</strong>: Se você clicar neste botão, você pode ver as notas da versão para cada versão lançada do GameMaker: Studio. Estas notas detalha todas as correções de bugs e mudanças que foram incorporadas ao programa e dizer-lhe qual a versão que você está usando atualmente.</p>
+
+<p><strong>Demos(Demonstrações)</strong>: Isto irá permitir que você visualize arquivos de demonstração que vêm com GameMaker: Studio. Demos são diferentes dos tutoriais, os tutoriais se concentram em explicar apenas uma função ou conceito ao invés de dar uma visão geral, e como tal é recomendável que você tenha um conhecimento de como o GameMaker: Studio e GML trabalham antes de abrir esta guia.</p>
+
+<p><strong>Tutorials(Tutoriais)</strong>: Esta guia mostra uma seleção de tutoriais que vêm com GameMaker: Studio. Estes são concebidos como uma introdução ao uso GameMaker: Studio e recomenda-se que os novos usuários procurem- o antes de iniciar qualquer novo projeto. Tal como acontece com as Demos.</p>
+
+<p><strong>News(Novidades)</strong>: Isto irá mostrar as mais recentes notícias da empresa responsável pelo game maker, YoYo Games.</p>
+
+<p><strong>Licenses(Licenças)</strong>: Esta guia irá exibir o GameMaker: License Studio, bem como todas as várias licenças de terceiros de produtos que são utilizados.
+Abaixo das abas, há uma seção com dicas, sugestões e serviços relacionados com GameMaker: Studio, que pode percorrer usando os ícones de seta de cada lado, e mais abaixo você vai ver listado os projetos que você já os abriu para que você pode rapidamente voltar para o trabalho de onde parou anteriormente.</p>
+
+<h2 id="a-interface">A Interface</h2>
+
+<p>A Gui:
+Uma vez que você carregar ou criar seu projeto e no
+ GameMaker: Studio a GUI principal será mostrada e é 
+ algo como isto:
+ <img src="/img/post/game_maker/gui_image.png" alt="Imagem que demonstra abertura inicial da Gui do game maker" class="responsive-img" /></p>
+
+<p>Esta é a principal interface do Game Maker: Studio e é aqui que você controla todos os aspectos do seu projeto atual. À esquerda, você pode ver os diferentes recursos mencionados em outras seções do manual: Sprites, sons, Fundos, caminhos, scripts, fontes, linhas de tempo, Objetos, a Global Game Settings e, finalmente, Extensions.</p>
+
+<p>Na parte superior da janela, existe o menu e uma barra de ferramentas à mão para acessar alguns dos comandos mais utilizados ao criar um jogo.
+Vamos discutir brevemente os vários itens do menu, botões, etc …</p>
+
+<h2 id="rvore-de-recursos">Árvore de recursos</h2>
+
+<p>À esquerda a principal você encontrará a árvore de recursos. Nela você vai ver uma “árvore” com todos os recursos em seu jogo. Ela funciona da mesma forma como o Windows Explorer, e você ja deve ser familiarizado com a forma de como ele funciona.
+Se um item tem um sinal de + na frente dele você pode clicar no sinal e ver os recursos dentro dele (expandi-lo). Ao clicar sobre o - estes desaparecem novamente (recolhê-la).</p>
+
+<p>Você pode mudar o nome de um recurso (exceto os de nível superior que mostram o tipo de recurso contidos), selecionando-o uma vez com um único clique, em seguida, dando uma outra único clique sobre o nome mais de uma vez. Clicando duas vezes em um recurso abrirá automaticamente suas propriedades onde você poderá editar e mudar as coisas relacionadas a ele. Use o botão direito do mouse para abrir uma janela de contexto específico que contém os mesmos comandos como se encontra no menu Editar.</p>
+
+<p>Você pode alterar a ordem dos recursos clicando em um recurso específico e, em seguida, arrastando-o para o local apropriado dentro de seu grupo de recursos. Você também pode filtrar a árvore de recursos para mostrar apenas as coisas que são de seu interesse para utilizar a busca/filtro seleciona as opções na parte inferior:</p>
+
+<p><img src="/img/post/game_maker/gui_search.png" alt="Imagem que demonstra a arvore de recursos do game maker" class="responsive-img" /></p>
+
+<h2 id="barra-de-ferramentas">Barra de Ferramentas</h2>
+
+<p>A barra de ferramentas no Game Maker: Studio contém botões para criar cada um dos recursos que você vê presente em seu , bem como uma seleção de botões adicionais para criar um novo projeto, abra um projeto existente, salvar um projeto, criar um arquivo executável (exportar um projeto final) , abri um configurações globais de jogo e extensão de pacotes, bem como a abertura do arquivo de Ajuda. Todos estes comandos também podem ser acessadas através dos menus drop-down ou usando certos “hot key” (combinações).
+Há dois botões de nota aqui, porém, uma vez que não estão presentes em nenhum outro lugar no Game Maker: GUI Studio:</p>
+
+<p><img src="/img/post/game_maker/nginxstop.png" alt="Imagem que demonstra o botão de parar compilação de recursos do game maker" class="responsive-img" />
+Este botão pode ser usado para cancelar a compilação dos seus jogos para o módulo de destino, ou (em certas metas só) para parar o jogo, enquanto ele estiver sendo executado depois de ter sido compilado.</p>
+
+<p><img src="/img/post/game_maker/clear_cache.png" alt="Imagem que demonstra o Limpar Projeto Ativos (Compilar Cache) do game maker" class="responsive-img" />
+Pressionar esse botão irá limpar o cache do compilador ativo circulante. GameMaker: Studio armazena imagens, sons, os scripts etc … entre o uso de um cache para poupar tempo quando for testar o seu jogo, pois ele só vai voltar a compilar as coisas que foram alteradas antes do teste. No entanto, esse cache pode ficar corrompido ao longo do tempo, ou você pode querer fazer um teste completo com nenhum cache feito anteriormente.</p>
+
+<h2 id="meu-canal-no-youtube">Meu canal no youtube</h2>
+
+<p>Em <a href="http://youtube.com/packtudo">meu canal do youtube</a> leciono gratuitamente aulas de game maker, assiste la :)</p>
+
+<p>Por fim é isso, crítica e sugestões, deixe nos comentários ^^</p>
+
+	</div>
+<footer class="post-footer green text-shadown-bottom-green border-black">
+	<div class="container">
+		<h2 class="post-title text-shadown-bottom-right-green">Gostou do blog?</h2>
+		<p class="post-subtitle">Faça uma doação e me ajude a manter as postagens frequentes <3</p>
+		<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+		<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+		<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+		<input type="hidden" name="currency" value="BRL" />
+		<input type="hidden" name="receiverEmail" value="packtudo@gmail.com" />
+		<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/205x30-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+		</form>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+	</div>
+</footer>
+<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+		    this.page.url = 'http://packtudo.info/cursos/interface-grafica-do-usuario-game-maker/';  // Replace PAGE_URL with your page's canonical URL variable
+		     his.page.identifier = '/cursos/interface-grafica-do-usuario-game-maker/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		 };	
+		 (function() {  // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+		        
+		     s.src = '//packtudo.disqus.com/embed.js';
+		        
+		    s.setAttribute('data-timestamp', +new Date());
+		    (d.head || d.body).appendChild(s);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+    </div>
+
+	<script src="/js/materialize.min.js"></script>
+	<script src="/js/init.js"></script>
+	<script src="/js/plugins/smooth-scroll.js"></script>
+	<script src="/js/plugins/detect-mobile.js"></script>
+	<script>
+	    smoothScroll.init();
+	</script>
+	<script type="text/javascript">
+	var color = $(".post-header").css("background-color");
+	if(!isMobile()){
+		$('.post-content > h1').css("color",color).css("transition","color 1s");
+		$('.post-content > h2').css("color",color).css("transition","color 1s");
+		$('.post-content > h3').css("color",color).css("transition","color 1s");
+		$('.post-content p').css("color","black").css("transition","color 1s");
+
+	}else{
+		$('.post-content > h1').css("color",color);
+		$('.post-content > h2').css("color",color);
+		$('.post-content > h3').css("color",color);
+		$('.post-content > p').css("color","black");
+	}
+	</script>
+  </body>
+
+</html>

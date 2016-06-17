@@ -1,0 +1,47 @@
+---
+layout: post_default
+---
+<div class="post-header {{page.color}}">
+ 	<div class="col s12">
+	<p>
+ 		<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</time>
+  	</p>
+    <h1 class="header post-title text-shadown-bottom-right-{{page.color}}" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-subtitle">{{page.summary}}</p>
+    </div>
+ </div>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="container post-content" style="h1{color:{{page.color}};}" itemprop="articleBody">
+	    {{ content }}
+	</div>
+<footer class="post-footer {{page.color}} text-shadown-bottom-{{page.color}} border-black">
+	<div class="container">
+		<h2 class="post-title text-shadown-bottom-right-{{page.color}}">Gostou do blog?</h2>
+		<p class="post-subtitle">Faça uma doação e me ajude a manter as postagens frequentes <3</p>
+		<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+		<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+		<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+		<input type="hidden" name="currency" value="BRL" />
+		<input type="hidden" name="receiverEmail" value="packtudo@gmail.com" />
+		<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/205x30-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+		</form>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+	</div>
+</footer>
+<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+		    this.page.url = '{{site.url}}{{page.url}}';  // Replace PAGE_URL with your page's canonical URL variable
+		     his.page.identifier = '{{page.url}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		 };	
+		 (function() {  // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+		        
+		     s.src = '//packtudo.disqus.com/embed.js';
+		        
+		    s.setAttribute('data-timestamp', +new Date());
+		    (d.head || d.body).appendChild(s);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>

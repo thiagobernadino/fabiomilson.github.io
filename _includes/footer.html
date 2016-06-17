@@ -1,0 +1,51 @@
+<footer class="page-footer bg-color-tomato" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col 20 s9">
+          <h5 class="white-text">Packtudo</h5>
+          <p class="grey-text text-lighten-4">Bem, me chamo Milson Fabio Oliveira lima, Curso Sistemas de informação pela <a class="external-link text-color-black" href="http://anhanguera.com/home/">Anhanguera FacNet</a>, e por incrível que pareça la não é todo esse desastre que todo mundo diz, apesar que é verdade o "mito" de você passar em frente a faculdade e deixar sua identidade cair na entrada e automagicamente você já é aluno dela, mas não deixa de possuir excelentes professores.</p>
+
+
+        </div>
+        <div class="col l3 s12 center-align">
+          <h5 class="white-text">Siga-me</h5>
+          <ul>
+            <li><a class="white-text" href="{{site.baseurl}}/feed.xml">Feed XML</a></li>
+            <li><a class="white-text" href="{{site.facebook_url}}">Facebook</a></li>
+            <li><a class="white-text" href="{{site.google_plus_url}}" rel="publisher">Google+</a></li>
+            <li><a class="white-text" href="{{site.youtube_url}}">Youtube</a></li>
+            <li><a class="white-text" href="{{site.github_url}}">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+<!-- build:js -->
+<script src="{{"/js/materialize.min.js" | prepend: site.github.baseurl}}"></script>
+<script src="{{"/js/init.js" | prepend: site.github.baseurl}}"></script>
+<script src="{{"/js/plugins/smooth-scroll.js" | prepend: site.github.baseurl}}"></script>
+<script type="text/javascript" src="{{ "/js/plugins/super-search.js" | prepend: site.github.baseurl }}"></script>
+<script src="{{"/js/plugins/jquery.appear.js" | prepend: site.github.baseurl}}"></script>
+<script src="{{"/js/plugins/skills.js" | prepend: site.github.baseurl}}"></script>
+<!-- endbuild -->
+<script>
+    smoothScroll.init();
+</script>
+
+<div class="super-search" id="js-super-search">
+<a href="javascript:void(0)" onclick="superSearch.toggle()" class="super-search__close-btn">X</a>
+<input type="text" placeholder="Digite aqui para pesquisar :P" class="super-search__input" id="js-super-search__input">
+<ul class="super-search__results" id="js-super-search__results"></ul>
+</div>
+
+<script>
+superSearch({
+searchFile: '{{ "/feed.xml" | prepend: site.github.baseurl }}'
+});
+</script>

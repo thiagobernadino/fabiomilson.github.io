@@ -1,0 +1,60 @@
+/**
+ * Colors template
+ */
+ .color-default *{
+	color:black;
+}
+/* ------- Orange --------- */
+.color-default .color-orange{color:#F35A25;}
+.color-orange h1{color:#F35A25;}
+.color-orange h2{color:#F35A25;}
+.color-orange h3{color:#F35A25;}
+.color-orange a{color:#F35A25;}
+.bg-color-orange{background-color: #F35A25;}
+.border-orange{border:1px solid #F35A25;}
+
+/* ------- Purple --------- */
+.color-default .color-purple{color:#7D669E;}
+.color-purple h1{color:#7D669E;}
+.color-purple a{color:#7D669E;}
+.color-purple span{color:#7D669E;}
+.bg-color-purple{background-color: #7D669E;}
+.border-purple{border:1px solid #7D669E;}
+
+/* ------- Green --------- */
+.color-default .color-green{color: #7aab13;}
+.color-green h1{color: #7aab13;}
+.color-green a{color: #7aab13;}
+.bg-color-green{background-color: #7aab13;}
+.border-green{border:1px solid #7aab13;}
+
+/* ------- Blue --------- */
+.color-default .color-blue{color:#637A91;}
+.color-blue h1{color:#637A91;}
+.color-blue h2{color:#637A91;}
+.color-blue h3{color:#637A91;}
+.color-blue h4{color:#637A91;}
+.color-blue a{color:#637A91;}
+.bg-color-blue{background-color: #637A91;}
+.border-blue{border:1px solid #637A91;}
+
+/* ------- Blue Aqua --------- */
+.color-default .color-blue-aqua{color:#2DA0C3;}
+.color-blue-aqua{color:#2DA0C3;}
+.color-blue-aqua h1{color:#2DA0C3;}
+.color-blue-aqua h2{color:#2DA0C3;}
+.color-blue-aqua h3{color:#2DA0C3;}
+.color-blue-aqua a{color:#2DA0C3;}
+.bg-color-blue-aqua{background-color: #2DA0C3;}
+.border-blue-aqua{border:1px solid #2DA0C3;}
+
+/* ------- Grey --------- */
+.color-grey{color:#b2bac2;}
+.color-grey a{color:#b2bac2;}
+
+/* ------- White --------- */
+.color-white{color:#fff;}
+.color-white a{color:#fff;}
+
+/* ------- Black --------- */
+.border-black{border:1px solid #030303;}

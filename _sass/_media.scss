@@ -1,0 +1,101 @@
+@media screen and (min-width: 320px){
+    .card-teach{
+        display:none;
+    }
+    .chip{
+        background:  transparent;
+        bottom: 45px; right: 0;
+    }
+    .chip img{
+        margin:0 !important;
+    }
+ }
+@media screen and (min-width: 360px){
+     .post{
+        margin: 20px auto;
+     }
+     .post-header{
+        padding-top: 300px;
+     }
+     .content-footer{
+        margin-top: 30%;
+     }
+}
+@media screen and (min-width: 768px){
+
+    .article-index{
+        flex-basis: 300px;
+    }
+
+    .logo{
+        font-size: 1.75rem;
+        margin-left: 0;
+    }
+    .icon-menu-out{
+        width: 30px;
+        height:30px;
+        padding-right: 30px;
+    }
+
+     .post-title{
+        font-size:2.75rem;
+     }
+
+    .super-search__input{
+        font-size: 2.5rem;
+        padding: 15px 20px;
+        text-align: center;
+    }
+    .super-search__close-btn{
+        font-size: 3.50rem;
+        right: 25px;
+    }
+
+    .content-footer{
+        margin-top: 15%;
+    }
+
+    .post-content tbody tr td{
+         padding: 10px;
+    }
+
+ }
+@media screen and (min-width: 980px){
+
+    .article-index{
+        flex-basis: 200px;
+    }
+    
+    .navigator-pages a{
+        opacity: .5;
+    }
+    .navigator-pages a:hover{
+        opacity: 1;
+    }
+
+    .post-title{
+       font-size: 2.75rem;
+    }
+
+    .content-footer{
+        margin-top: 10%;
+    }
+ }
+
+ @media screen and (min-width: 1280px){
+
+    .article-index{
+        padding: 40px;
+        flex-basis: 300px;
+    }
+    .post{
+        width: 100%;
+    }
+    .post-content{
+        max-width: 50%;
+    }
+    .content-footer{
+        margin-top: 5%;
+    }
+
+ }

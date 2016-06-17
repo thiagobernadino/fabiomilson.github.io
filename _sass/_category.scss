@@ -1,0 +1,23 @@
+.link-category{
+    display: block;
+    border-bottom: 1px solid #dadada;
+    padding: .625rem 0;
+    transition: all .5s;
+}
+
+.link-category:hover{
+     border-bottom: 1px solid #002F4C;
+}
+
+.link-category a{
+    color: #005f97;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    transition: all .3s;
+    font-size: 1.5rem;
+}
+
+.category{
+    margin-top: 10px;
+}

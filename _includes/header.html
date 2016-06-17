@@ -1,0 +1,85 @@
+<header class="navbar-fixed" id="header">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+    <li class="divider"></li>
+  </ul>
+  
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+  </ul>
+  
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a itemprop="url" id="logo-container" href="{{site.url}}" class="brand-logo uppercase">Início</a>
+    {% if page.title == "Categorias" %}
+  <ul class="right hide-on-med-and-down">
+        <li>
+        	<a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Misc" data-scroll>
+        		<span itemprop="name">Misc</span> 
+        	</a> 
+        </li>
+        <li>
+	        <a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Cursos" data-scroll>
+	        	<span itemprop="name">Cursos</span>
+	        </a> 
+        </li>
+        <li>
+	    	<a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Tutoriais" data-scroll>
+	    		<span itemprop="name">Tutoriais</span> 
+	    	</a> 
+       	</li>
+        <li>
+        	<a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Anotações" data-scroll>
+        		<span itemprop="name">Anotações</span>
+        	</a> 
+        </li>
+        <li>
+        	<a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/portfolio">
+        		<span itemprop="name">Meu portfólio</span>
+        	</a> 
+        </li>
+        <li>
+        	<a itemprop="url" class="dropdown-button" data-activates="dropdown1">
+        		<span itemprop="name">Faculdade</span><i class="material-icons right">arrow_drop_down</i> 
+        	</a>
+        </li>
+        <li>
+        	<a itemprop="url" class="nav-search" onclick="superSearch.toggle();">
+        		<i class="material-icons right nav-search">search</i> 
+        	</a> 
+        </li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Misc" data-scroll>Misc</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Cursos" data-scroll>Cursos</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Tutoriais" data-scroll>Tutoriais</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Anotações" data-scroll>Anotações</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+    {% else  %}
+    <!-- Menu full -->
+     <ul class="right hide-on-med-and-down">
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Cursos" >Cursos</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Tutoriais" >Tutoriais</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Anotações" >Anotações</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown1">Faculdade<i class="material-icons right">arrow_drop_down</i></button></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();"><i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Cursos">Cursos</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Tutoriais">Tutoriais</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Anotações">Anotações</a></li>
+        <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+    {%endif%}
+     
+      <a itemprop="url" href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>

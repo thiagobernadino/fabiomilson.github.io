@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="l-UbdyRHWOj6SzgX0-k_50icWS0XE5Zcou3iWP3SmQ4" />
+  
+  <title>Principais comandos do MySQL</title>
+
+  <meta name="description" content="Introdução">
+  
+  <link rel="author" href="https://plus.google.com/113463276872649574744?rel=author" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://packtudo.info/anota%C3%A7%C3%B5es/principais-comandos-banco-mysql/">
+  <link rel="alternate" type="application/rss+xml" title="Packtudo" href="http://packtudo.info/feed.xml">
+  <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+  
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="fb:admins" content="100002892380354" />
+  <meta property="og:url" content="http://packtudo.info/anota%C3%A7%C3%B5es/principais-comandos-banco-mysql/" />
+  <meta property="og:title" content="Principais comandos do MySQL" />
+  <meta property="og:description" content="Este é um site feito por desenvolvedor apaixonado por tecnologia com a intenção de compartilhar todo o conhecimento adquirido por ele até então :)" />
+  <meta property="og:site_name" content="Packtudo" />
+  
+    <meta property="og:image" content="http://packtudo.info/img/post/tumbnails/tumbnail_mysql.png" />
+    
+
+  <script src="/js/jquery-2.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77044018-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+<!-- Titularidade do spider ad -->
+</head>
+
+
+  <body>
+    <header class="navbar-fixed" id="header">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+    <li class="divider"></li>
+  </ul>
+  
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+  </ul>
+  
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a itemprop="url" id="logo-container" href="http://packtudo.info" class="brand-logo uppercase">Início</a>
+    
+    <!-- Menu full -->
+     <ul class="right hide-on-med-and-down">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos" >Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais" >Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações" >Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown1">Faculdade<i class="material-icons right">arrow_drop_down</i></button></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();"><i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos">Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais">Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações">Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+    
+     
+      <a itemprop="url" href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>
+    <div itemscope itemtype="http://schema.org/Article" class="section no-pad-bot">
+        <div class="post-header purple">
+ 	<div class="col s12">
+	<p>
+ 		<time datetime="2016-04-29T19:49:21-03:00" itemprop="datePublished" class="post-meta">2016-04-29</time>
+  	</p>
+    <h1 class="header post-title text-shadown-bottom-right-purple" itemprop="name headline">Principais comandos do MySQL</h1>
+    <p class="post-subtitle">Alguns comandos para MySql</p>
+    </div>
+ </div>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="container post-content" style="h1{color:purple;}" itemprop="articleBody">
+	    <h1 id="introduo">Introdução</h1>
+
+<p>Neste post lhes trago um pequeno compilado de comandos usados no banco de dados MySQL para auxiliar novatos e também para os programadores esquecidos de plantão, caso deseje contribuir de sugestões la no post <a href="https://github.com/fabiomilson/fabiomilson.github.io/tree/master/_posts" class="external-link" target="_blank">via GitHub</a>.</p>
+
+<hr />
+
+<h2 id="comandos-sql-so-qualificados-por-3-grupos">Comandos SQL são qualificados por 3 grupos</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">//</span> <span class="n">Comandos</span> <span class="n">para</span> <span class="n">manipular</span> <span class="n">o</span> <span class="n">programa</span><span class="p">.</span> 
+<span class="n">DML</span> <span class="o">-</span> <span class="k">Data</span> <span class="n">Manipulation</span> <span class="k">Language</span><span class="p">.</span>
+
+<span class="o">//</span> <span class="n">Comandos</span> <span class="n">para</span> <span class="n">definir</span> <span class="n">o</span> <span class="n">que</span> <span class="n">ir</span><span class="err">á</span> <span class="n">os</span> <span class="n">dados</span> <span class="n">na</span> <span class="n">linguagem</span><span class="p">.</span>
+<span class="n">DDL</span> <span class="o">-</span> <span class="k">Data</span> <span class="n">Definition</span> <span class="k">Language</span> 
+
+<span class="o">//</span> <span class="n">Comandos</span> <span class="n">para</span> <span class="n">controlar</span> <span class="n">o</span> <span class="n">que</span> <span class="n">acontece</span> <span class="k">no</span> <span class="n">banco</span><span class="p">.</span>
+<span class="n">DCL</span> <span class="o">-</span> <span class="k">Data</span> <span class="n">Control</span> <span class="k">Language</span> 
+
+<span class="o">//</span> <span class="n">Cria</span> <span class="n">um</span> <span class="n">Banco</span> <span class="n">de</span> <span class="n">dados</span><span class="p">.</span> 
+<span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">Nome_Banco_Dados</span>
+
+<span class="o">//</span> <span class="n">Mostrar</span> <span class="n">Bancos</span> <span class="n">de</span> <span class="n">Dados</span> <span class="n">Existentes</span> <span class="k">no</span> <span class="n">servidor</span><span class="p">.</span>
+<span class="k">SHOW</span> <span class="n">DATABASES</span> 
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">acessar</span><span class="o">/</span><span class="n">Usar</span> <span class="n">Banco</span> <span class="n">de</span> <span class="n">dados</span><span class="p">.</span> 
+<span class="n">USE</span> <span class="n">Nome_Banco_Dados</span>
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">criar</span> <span class="n">uma</span> <span class="n">tabela</span><span class="p">.</span> 
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">table_name</span>
+<span class="p">(</span>
+	<span class="n">nome_columa1</span> <span class="n">tipo_dado</span><span class="p">(</span><span class="n">tamanho</span><span class="p">),</span>
+	<span class="n">nome_columa2</span> <span class="n">tipo_dado</span><span class="p">(</span><span class="n">tamanho</span><span class="p">),</span>
+	<span class="n">nome_columa3</span> <span class="n">tipo_dado</span><span class="p">(</span><span class="n">tamanho</span><span class="p">),</span>
+	<span class="p">....</span>
+<span class="p">);</span>
+
+<span class="o">//</span> <span class="n">Exemplo</span><span class="p">:</span> 
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">cadastro</span> 
+<span class="p">(</span> 
+	<span class="n">nome</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">35</span><span class="p">),</span> 
+	<span class="n">sobrenome</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span> 
+	<span class="p">....</span>
+<span class="p">);</span> 
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">inserir</span> <span class="n">registro</span> <span class="n">em</span> <span class="n">uma</span> <span class="n">tabela</span><span class="p">.</span> 
+<span class="k">INSERT</span> <span class="n">Nome_Tabela</span> <span class="k">values</span><span class="p">()</span>
+
+<span class="o">//</span> <span class="n">Lembrando</span> <span class="n">que</span> <span class="n">os</span> <span class="n">campos</span> <span class="n">ir</span><span class="err">ã</span><span class="n">o</span> <span class="n">dentro</span> <span class="n">dos</span> <span class="p">()</span>
+
+<span class="o">//</span> <span class="n">Exemplo</span><span class="p">:</span> 
+
+<span class="k">INSERT</span> <span class="n">nomeTabela</span> <span class="k">VALUES</span> <span class="p">(</span> 
+	<span class="n">valor1</span><span class="p">,</span> 
+	<span class="n">valor2</span> 
+<span class="p">);</span> 
+
+<span class="o">//</span> <span class="n">Exemplo</span> <span class="mi">2</span><span class="p">:</span> 
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">nomeTabela</span> <span class="k">VALUES</span> <span class="p">(</span> 
+	<span class="n">valor1</span><span class="p">,</span> 
+	<span class="n">valor2</span> 
+<span class="p">);</span> 
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">mostrar</span> <span class="n">descri</span><span class="err">çã</span><span class="n">o</span> <span class="n">tabela</span><span class="p">.</span> 
+<span class="k">DESCRIBE</span> <span class="n">Nome_Tabela</span>
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">mostrar</span> <span class="n">dados</span> <span class="n">de</span> <span class="n">uma</span> <span class="n">tabela</span><span class="p">.</span>
+<span class="k">SELECT</span> <span class="n">Nome_Do_Campo</span> <span class="k">FROM</span> <span class="n">Nome_Tabela</span> 
+
+<span class="o">//</span> <span class="k">No</span> <span class="n">Lugar</span> <span class="k">do</span> <span class="n">Nome_Do_Campo</span><span class="p">,</span> <span class="n">Podemos</span> <span class="n">substituir</span> <span class="n">por</span> <span class="o">*</span> <span class="n">para</span> <span class="n">mostrar</span> <span class="n">todos</span> <span class="n">os</span> <span class="n">registros</span><span class="p">.</span>
+
+<span class="c1">---- Ações de delete ----
+</span>
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">deletar</span> <span class="n">registros</span> <span class="n">em</span> <span class="n">uma</span> <span class="n">tabela</span> <span class="n">atrav</span><span class="err">é</span><span class="n">s</span> <span class="k">do</span> <span class="n">ID</span><span class="p">.</span>
+<span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">NOME_DA_TABELA</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="n">VALOR_DO_ID</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">deletar</span> <span class="n">um</span> <span class="n">banco</span> <span class="n">de</span> <span class="n">dados</span><span class="p">.</span> 
+<span class="k">DROP</span> <span class="k">DATABASE</span> <span class="n">Nome_Banco_Dados</span>
+
+<span class="c1">---- Alterar tabela ----
+</span>
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">renomear</span> <span class="n">uma</span> <span class="n">tabela</span><span class="p">.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Nome_Da_Tabela</span> <span class="k">RENAME</span> <span class="n">Nome_Tabela_Novo</span> 
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">adicionar</span> <span class="n">um</span> <span class="n">campo</span> <span class="n">a</span> <span class="n">uma</span> <span class="n">tabela</span><span class="p">.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Nome_Da_Tabela</span> <span class="k">ADD</span> <span class="n">campo_Novo</span> <span class="n">TIPO_DO_CAMPO</span><span class="p">()</span>
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">adicionar</span> <span class="n">uma</span> <span class="n">nova</span> <span class="n">coluna</span> <span class="n">na</span> <span class="n">tabela</span><span class="p">.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Nome_Da_Tabela</span> <span class="k">ADD</span> <span class="n">COLUNM</span> <span class="n">NOME_COLUNA</span> 
+
+<span class="o">//</span> <span class="n">Server</span> <span class="n">para</span> <span class="n">modificar</span> <span class="n">um</span> <span class="n">campo</span> <span class="n">e</span> <span class="n">seu</span> <span class="n">tipo</span><span class="p">.</span>
+<span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Nome_Da_Tabela</span> <span class="k">MODIFY</span> <span class="n">NOME_CAMPO</span> <span class="n">TIPO_DO_CAMPO</span><span class="p">()</span> 
+
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">delimitar</span> <span class="n">uma</span> <span class="n">linha</span> <span class="o">/</span> <span class="n">quantidade</span> <span class="n">de</span> <span class="n">codigo</span> <span class="n">em</span> <span class="n">determinada</span> <span class="err">á</span><span class="n">rea</span><span class="p">,</span> <span class="n">geralmente</span> <span class="n">utilizado</span> <span class="n">para</span> <span class="n">limitar</span> <span class="n">comandos</span> <span class="n">em</span> <span class="n">Triggers</span><span class="p">.</span>
+
+<span class="o">//</span> <span class="n">Exemplo</span> <span class="k">DELIMITER</span> <span class="err">$$</span>
+<span class="k">DELIMITER</span> <span class="nv">" SIMBOLO PARA DELIMITAR "</span>
+
+
+<span class="c1">---- Triggers - Gatilhos ----
+</span>
+<span class="o">//</span> <span class="n">Disparar</span> <span class="n">uma</span> <span class="n">a</span><span class="err">çã</span><span class="n">o</span> <span class="n">um</span> <span class="n">comando</span><span class="p">,</span> <span class="n">um</span> <span class="n">evento</span><span class="p">.</span>
+<span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">Nome_Rela</span><span class="err">çã</span><span class="n">o</span> <span class="k">AFTER</span> <span class="k">INSERT</span> <span class="k">ON</span> <span class="n">Nome_Tabela</span> <span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span> 
+	<span class="k">BEGIN</span> 
+		<span class="n">Comandos_Que_Iram_Acontecer_Na_Trigger</span> 
+	<span class="k">END</span> 
+
+<span class="c1">---- Gerenciar Usuários SGBD ----
+</span>
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">criar</span> <span class="n">um</span> <span class="n">usu</span><span class="err">á</span><span class="n">rio</span> <span class="k">no</span> <span class="n">SGBD</span><span class="p">.</span>
+<span class="k">CREATE</span> <span class="k">user</span> <span class="s1">'sistema'</span><span class="o">@</span><span class="s1">'localhost'</span> <span class="n">identified</span> <span class="k">by</span> <span class="s1">'0401011'</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">revogar</span> <span class="n">todos</span> <span class="n">os</span> <span class="n">comandos</span> <span class="n">que</span> <span class="n">o</span> <span class="n">usu</span><span class="err">á</span><span class="n">rio</span> <span class="n">possa</span> <span class="n">ter</span> <span class="n">em</span> <span class="n">um</span> <span class="n">banco</span> <span class="n">de</span> <span class="n">dados</span> <span class="o">/</span> <span class="n">SGBD</span><span class="p">.</span>
+<span class="k">REVOKE</span> <span class="k">ALL</span> <span class="k">ON</span> <span class="n">Banco_De_Dados</span><span class="p">.</span><span class="n">TABELA</span> <span class="k">FROM</span> <span class="s1">'sistema'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="k">No</span> <span class="n">Lugar</span> <span class="n">da</span> <span class="n">TABELA</span><span class="p">,</span> <span class="n">Podemos</span> <span class="n">substituir</span> <span class="n">por</span> <span class="o">*</span> <span class="n">para</span> <span class="n">especificar</span> <span class="n">todas</span> <span class="k">as</span> <span class="n">tabelas</span><span class="p">.</span>
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">garantir</span><span class="o">/</span><span class="n">adicionar</span> <span class="n">algum</span> <span class="n">comando</span> <span class="n">para</span> <span class="n">um</span> <span class="n">usu</span><span class="err">á</span><span class="n">rio</span> <span class="n">em</span> <span class="n">determinado</span> <span class="n">banco</span> <span class="o">/</span> <span class="n">tabela</span><span class="p">.</span>
+<span class="o">//</span><span class="k">No</span> <span class="n">Lugar</span> <span class="n">da</span> <span class="n">TABELA</span><span class="p">,</span> <span class="n">Podemos</span> <span class="n">substituir</span> <span class="n">por</span> <span class="o">*</span> <span class="n">para</span> <span class="n">especificar</span> <span class="n">todas</span> <span class="k">as</span> <span class="n">tabelas</span><span class="p">.</span>
+<span class="k">GRANT</span> <span class="n">Comando_Para_Ser_Garantindo</span> <span class="k">ON</span> <span class="k">Database</span><span class="p">.</span><span class="n">TABELA</span> <span class="k">TO</span> <span class="s1">'sistema'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">limpar</span> <span class="n">o</span> <span class="n">buffer</span> <span class="n">de</span> <span class="n">privil</span><span class="err">é</span><span class="n">gios</span> <span class="n">salvos</span> <span class="n">em</span> <span class="n">memoria</span><span class="p">.</span>
+<span class="n">FLUSH</span> <span class="k">PRIVILEGES</span><span class="p">;</span>
+
+<span class="c1">---- Procedimentos ----
+</span>
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">criar</span> <span class="n">procedimentos</span> <span class="n">a</span> <span class="n">serem</span> <span class="n">feitos</span> <span class="n">dentro</span> <span class="k">do</span> <span class="n">banco</span> <span class="n">de</span> <span class="n">dados</span><span class="p">.</span>
+<span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">nomeDoProcedimento</span><span class="p">()</span>
+
+<span class="o">//</span> <span class="n">Exemplo</span><span class="p">:</span>
+<span class="k">DELIMITER</span> <span class="err">$$</span>
+	<span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">nomeCidade</span><span class="p">()</span>
+	    <span class="k">BEGIN</span>
+            <span class="k">SELECT</span> <span class="n">cliente</span><span class="p">.</span><span class="n">nome</span><span class="p">,</span> <span class="n">cliente</span><span class="p">.</span><span class="n">bairro</span><span class="p">,</span><span class="n">telcliente</span><span class="p">.</span><span class="n">fixo</span>
+                <span class="k">FROM</span> <span class="n">cliente</span><span class="p">,</span><span class="n">telcliente</span> <span class="k">WHERE</span> <span class="n">cliente</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">telcliente</span><span class="p">.</span><span class="n">idCliente</span><span class="p">;</span>
+        <span class="k">END</span><span class="err">$$</span>
+
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">chamar</span> <span class="n">um</span> <span class="n">procedimento</span><span class="p">.</span>
+<span class="k">CALL</span> <span class="n">nomeDoProcedimento</span><span class="p">()</span>
+
+<span class="c1">---- Procedimentos com entrada de dados
+</span><span class="n">Dados</span> <span class="n">ser</span><span class="err">ã</span><span class="n">o</span> <span class="n">inseridos</span> <span class="n">atrav</span><span class="err">é</span><span class="n">s</span> <span class="n">de</span> <span class="n">uma</span> <span class="n">vari</span><span class="err">á</span><span class="n">vel</span> <span class="c1">----
+</span>
+<span class="o">//</span> <span class="n">Serve</span> <span class="n">para</span> <span class="n">criar</span> <span class="n">procedimentos</span> <span class="n">a</span> <span class="n">serem</span> <span class="n">feitos</span> <span class="n">dentro</span> <span class="k">do</span> <span class="n">banco</span> <span class="n">de</span> <span class="n">dados</span><span class="p">.</span>
+<span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">nomeDoProcedimento</span><span class="p">(</span> <span class="k">IN</span> <span class="n">Vari</span><span class="err">á</span><span class="n">vel</span> <span class="n">Tipo_de_Dado</span><span class="p">()</span> <span class="p">)</span>
+
+<span class="o">//</span> <span class="n">Exemplo</span><span class="p">:</span>
+	<span class="k">DELIMITER</span> <span class="err">$$</span>
+        <span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">nomeCidade</span><span class="p">(</span> <span class="k">IN</span> <span class="n">entradaDado</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>  <span class="p">)</span>
+	        <span class="k">BEGIN</span>
+	            <span class="k">SELECT</span> <span class="n">cliente</span><span class="p">.</span><span class="n">nome</span><span class="p">,</span> <span class="n">cliente</span><span class="p">.</span><span class="n">bairro</span><span class="p">,</span><span class="n">telcliente</span><span class="p">.</span><span class="n">fixo</span>
+                <span class="k">FROM</span> <span class="n">cliente</span><span class="p">,</span><span class="n">telcliente</span> <span class="k">WHERE</span> <span class="n">cliente</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">telcliente</span><span class="p">.</span><span class="n">idCliente</span> <span class="k">AND</span> 
+                <span class="n">nome</span> <span class="k">LIKE</span> <span class="n">concat</span><span class="p">(</span><span class="n">valorEntrada</span><span class="p">,</span><span class="s1">'%'</span><span class="p">);</span>
+	        <span class="k">END</span><span class="err">$$</span>
+<span class="o">//</span><span class="n">Exemplo</span> <span class="mi">2</span><span class="p">:</span>
+	<span class="k">DELIMITER</span> <span class="err">$$</span>
+		<span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">venda</span><span class="p">(</span><span class="k">IN</span> <span class="n">id</span> <span class="n">INT</span><span class="p">)</span>
+		<span class="k">BEGIN</span>
+			<span class="k">SELECT</span> <span class="k">c</span><span class="p">.</span><span class="n">nome</span><span class="p">,</span><span class="n">p</span><span class="p">.</span><span class="n">descricao</span><span class="p">,</span><span class="n">v</span><span class="p">.</span><span class="n">dtCompra</span> <span class="k">FROM</span> <span class="n">venda</span> <span class="n">v</span><span class="p">,</span> <span class="n">produto</span> <span class="n">p</span><span class="p">,</span> <span class="n">cliente</span> <span class="k">c</span>
+		    <span class="k">WHERE</span> <span class="n">v</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id</span> <span class="k">and</span> <span class="n">v</span><span class="p">.</span><span class="n">idCliente</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">id</span> <span class="k">and</span> <span class="n">v</span><span class="p">.</span><span class="n">idProduto</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+		<span class="k">END</span><span class="err">$$</span>
+
+<span class="c1">---- Condições de Guarda ----
+</span>
+<span class="k">BEGIN</span>
+	<span class="n">IF</span><span class="p">()</span> <span class="k">then</span>
+<span class="k">end</span> <span class="n">if</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Pesquisa</span> <span class="n">por</span> <span class="n">partes</span>
+<span class="o">//</span> <span class="n">Pesquisa</span> <span class="n">por</span> <span class="n">peda</span><span class="err">ç</span><span class="n">os</span><span class="p">,</span> <span class="n">partes</span> <span class="k">do</span> <span class="n">nome</span>
+<span class="k">LIKE</span>  <span class="s1">'SIMBOLO_LETRA'</span><span class="p">;</span>
+<span class="o">//</span> <span class="n">Vai</span> <span class="n">puxar</span> <span class="n">todos</span> <span class="n">os</span> <span class="n">nomes</span> <span class="n">que</span> <span class="n">tenham</span> <span class="n">um</span> <span class="n">m</span> <span class="n">na</span> <span class="n">palavra</span><span class="p">.</span>
+<span class="o">//</span> <span class="n">Exemplo</span><span class="p">:</span>
+	<span class="k">where</span> <span class="p">...</span> <span class="k">and</span> <span class="p">...</span> <span class="k">and</span> <span class="k">like</span> <span class="s1">'%m%'</span><span class="p">;</span>
+
+<span class="c1">---- Alterações ----
+</span>
+<span class="n">Salvar</span> <span class="n">dados</span><span class="p">(</span><span class="n">Salvar</span> <span class="n">altera</span><span class="err">çõ</span><span class="n">es</span> <span class="n">Banco</span> <span class="n">de</span> <span class="n">dados</span><span class="p">)</span> <span class="n">banco</span> <span class="n">de</span> <span class="n">dados</span>
+
+<span class="k">COMMIT</span><span class="p">;</span> <span class="o">-</span> <span class="n">Efetua</span> <span class="n">o</span> <span class="n">salvamento</span><span class="p">.</span>
+
+<span class="k">ROLLBACK</span><span class="p">;</span> <span class="o">-</span> <span class="n">Desfaz</span> <span class="k">as</span> <span class="n">a</span><span class="err">çõ</span><span class="n">es</span> <span class="n">feita</span> <span class="k">no</span> <span class="n">banco</span><span class="p">.</span>
+</code></pre>
+</div>
+
+
+	</div>
+<footer class="post-footer purple text-shadown-bottom-purple border-black">
+	<div class="container">
+		<h2 class="post-title text-shadown-bottom-right-purple">Gostou do blog?</h2>
+		<p class="post-subtitle">Faça uma doação e me ajude a manter as postagens frequentes <3</p>
+		<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+		<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+		<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+		<input type="hidden" name="currency" value="BRL" />
+		<input type="hidden" name="receiverEmail" value="packtudo@gmail.com" />
+		<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/205x30-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+		</form>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+	</div>
+</footer>
+<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+		    this.page.url = 'http://packtudo.info/anota%C3%A7%C3%B5es/principais-comandos-banco-mysql/';  // Replace PAGE_URL with your page's canonical URL variable
+		     his.page.identifier = '/anota%C3%A7%C3%B5es/principais-comandos-banco-mysql/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		 };	
+		 (function() {  // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+		        
+		     s.src = '//packtudo.disqus.com/embed.js';
+		        
+		    s.setAttribute('data-timestamp', +new Date());
+		    (d.head || d.body).appendChild(s);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+    </div>
+
+	<script src="/js/materialize.min.js"></script>
+	<script src="/js/init.js"></script>
+	<script src="/js/plugins/smooth-scroll.js"></script>
+	<script src="/js/plugins/detect-mobile.js"></script>
+	<script>
+	    smoothScroll.init();
+	</script>
+	<script type="text/javascript">
+	var color = $(".post-header").css("background-color");
+	if(!isMobile()){
+		$('.post-content > h1').css("color",color).css("transition","color 1s");
+		$('.post-content > h2').css("color",color).css("transition","color 1s");
+		$('.post-content > h3').css("color",color).css("transition","color 1s");
+		$('.post-content p').css("color","black").css("transition","color 1s");
+
+	}else{
+		$('.post-content > h1').css("color",color);
+		$('.post-content > h2').css("color",color);
+		$('.post-content > h3').css("color",color);
+		$('.post-content > p').css("color","black");
+	}
+	</script>
+  </body>
+
+</html>

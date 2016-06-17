@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="l-UbdyRHWOj6SzgX0-k_50icWS0XE5Zcou3iWP3SmQ4" />
+  
+  <title>Criando aplicativos para celular - Parte 3</title>
+
+  <meta name="description" content="Como personalizar ícones no Cordova">
+  
+  <link rel="author" href="https://plus.google.com/113463276872649574744?rel=author" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://packtudo.info/cursos/criando-um-aplicativo-para-celular-com-cordova-parte-3/">
+  <link rel="alternate" type="application/rss+xml" title="Packtudo" href="http://packtudo.info/feed.xml">
+  <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+  
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="fb:admins" content="100002892380354" />
+  <meta property="og:url" content="http://packtudo.info/cursos/criando-um-aplicativo-para-celular-com-cordova-parte-3/" />
+  <meta property="og:title" content="Criando aplicativos para celular - Parte 3" />
+  <meta property="og:description" content="Este é um site feito por desenvolvedor apaixonado por tecnologia com a intenção de compartilhar todo o conhecimento adquirido por ele até então :)" />
+  <meta property="og:site_name" content="Packtudo" />
+  
+    <meta property="og:image" content="http://packtudo.info/img/post/tumbnails/cordova_default.png" />
+    
+
+  <script src="/js/jquery-2.1.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77044018-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+<!-- Titularidade do spider ad -->
+</head>
+
+
+  <body>
+    <header class="navbar-fixed" id="header">
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+    <li class="divider"></li>
+  </ul>
+  
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a itemprop="url" href="/faculdade/aoc/">Arquitetura e organização de computadores</a></li>
+  </ul>
+  
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a itemprop="url" id="logo-container" href="http://packtudo.info" class="brand-logo uppercase">Início</a>
+    
+    <!-- Menu full -->
+     <ul class="right hide-on-med-and-down">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos" >Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais" >Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações" >Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown1">Faculdade<i class="material-icons right">arrow_drop_down</i></button></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();"><i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a itemprop="url" href="/categorias/#Misc">Misc</a></li>
+        <li><a itemprop="url" href="/categorias/#Cursos">Cursos</a></li>
+        <li><a itemprop="url" href="/categorias/#Tutoriais">Tutoriais</a></li>
+        <li><a itemprop="url" href="/categorias/#Anotações">Anotações</a></li>
+        <li><a itemprop="url" href="/portfolio/">Meu portfólio</a></li>
+        <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+      </ul>
+    
+     
+      <a itemprop="url" href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</header>
+    <div itemscope itemtype="http://schema.org/Article" class="section no-pad-bot">
+        <div class="post-header cyan  darken-4">
+ 	<div class="col s12">
+	<p>
+ 		<time datetime="2016-05-29T23:10:00-03:00" itemprop="datePublished" class="post-meta">2016-05-29</time>
+  	</p>
+    <h1 class="header post-title text-shadown-bottom-right-cyan  darken-4" itemprop="name headline">Criando aplicativos para celular - Parte 3</h1>
+    <p class="post-subtitle">Personalizando ícones com o cordova</p>
+    </div>
+ </div>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="container post-content" style="h1{color:cyan  darken-4;}" itemprop="articleBody">
+	    <h1 id="como-personalizar-cones-no-cordova">Como personalizar ícones no Cordova</h1>
+
+<h2 id="configurando-cones-na-cli">Configurando Ícones na CLI</h2>
+
+<p>Ao trabalhar no Cordova podemos definir ícone(s) do aplicativo através da Tag <code class="highlighter-rouge">&lt;icon&gt;</code> sendo usada como
+elemento no config.xml. Se você não especificar um ícone, o logotipo Apache Cordova será usado.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon.png"</span> <span class="na">platform=</span><span class="s">"ios"</span> <span class="na">width=</span><span class="s">"57"</span> <span class="na">height=</span><span class="s">"57"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Atributos</td>
+      <td>Descrição</td>
+    </tr>
+    <tr>
+      <td>src</td>
+      <td>Inserir a Localização do arquivo de imagem, em relação ao seu diretório do projeto</td>
+    </tr>
+    <tr>
+      <td>plataform</td>
+      <td>Opcional - Plataforma de destino</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>Opcional - largura do Ícone em pixels</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>Opcional - altura do Ícone em pixels</td>
+    </tr>
+    <tr>
+      <td>density</td>
+      <td>Opcional - Densidade do ícone especificado</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A seguinte configuração pode ser usada para definir um ícone padrão, 
+que será usado para todas as plataformas.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/icon.png"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<p>Para cada plataforma, você também pode definir um conjunto de ícones de pixel-perfeito para caber em diferentes
+ resoluções de tela.</p>
+
+<h2 id="android">Android</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/ldpi.png"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/mdpi.png"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/hdpi.png"</span> <span class="na">density=</span><span class="s">"hdpi"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/xhdpi.png"</span> <span class="na">density=</span><span class="s">"xhdpi"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/xxhdpi.png"</span> <span class="na">density=</span><span class="s">"xxhdpi"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/android/xxxhdpi.png"</span> <span class="na">density=</span><span class="s">"xxxhdpi"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/platform&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="blackberry10">BlackBerry10</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"blackberry10"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/bb10/icon-86.png"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/bb10/icon-150.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/platform&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="browser">Browser</h2>
+
+<p>Ícones não se aplicam ​​para a plataforma do navegador.</p>
+
+<h2 id="ios">iOS</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>   <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- iOS 8.0+ --&gt;</span>
+        <span class="c">&lt;!-- iPhone 6 Plus  --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@3x.png"</span> <span class="na">width=</span><span class="s">"180"</span> <span class="na">height=</span><span class="s">"180"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- iOS 7.0+ --&gt;</span>
+        <span class="c">&lt;!-- iPhone / iPod Touch  --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60.png"</span> <span class="na">width=</span><span class="s">"60"</span> <span class="na">height=</span><span class="s">"60"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@2x.png"</span> <span class="na">width=</span><span class="s">"120"</span> <span class="na">height=</span><span class="s">"120"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- iPad --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-76.png"</span> <span class="na">width=</span><span class="s">"76"</span> <span class="na">height=</span><span class="s">"76"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-76@2x.png"</span> <span class="na">width=</span><span class="s">"152"</span> <span class="na">height=</span><span class="s">"152"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- iOS 6.1 --&gt;</span>
+        <span class="c">&lt;!-- Spotlight Icon --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-40.png"</span> <span class="na">width=</span><span class="s">"40"</span> <span class="na">height=</span><span class="s">"40"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-40@2x.png"</span> <span class="na">width=</span><span class="s">"80"</span> <span class="na">height=</span><span class="s">"80"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- iPhone / iPod Touch --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon.png"</span> <span class="na">width=</span><span class="s">"57"</span> <span class="na">height=</span><span class="s">"57"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon@2x.png"</span> <span class="na">width=</span><span class="s">"114"</span> <span class="na">height=</span><span class="s">"114"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- iPad --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-72.png"</span> <span class="na">width=</span><span class="s">"72"</span> <span class="na">height=</span><span class="s">"72"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-72@2x.png"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- iPhone Spotlight and Settings Icon --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-small.png"</span> <span class="na">width=</span><span class="s">"29"</span> <span class="na">height=</span><span class="s">"29"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-small@2x.png"</span> <span class="na">width=</span><span class="s">"58"</span> <span class="na">height=</span><span class="s">"58"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- iPad Spotlight and Settings Icon --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-50.png"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-50@2x.png"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/platform&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="windows">Windows</h2>
+
+<p>Para o Windows a abordagem recomendada para definir os ícones de aplicativos é usar o atributo <code class="highlighter-rouge">target</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/storelogo.png"</span> <span class="na">target=</span><span class="s">"StoreLogo"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/windows/smalllogo.png"</span> <span class="na">target=</span><span class="s">"Square30x30Logo"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/Windows/Square44x44Logo.png"</span> <span class="na">target=</span><span class="s">"Square44x44Logo"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/Windows/Square70x70Logo.png"</span> <span class="na">target=</span><span class="s">"Square70x70Logo"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/Windows/Square71x71Logo.png"</span> <span class="na">target=</span><span class="s">"Square71x71Logo"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/Windows/Square150x150Logo.png"</span> <span class="na">target=</span><span class="s">"Square150x150Logo"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/Windows/Square310x310Logo.png"</span> <span class="na">target=</span><span class="s">"Square310x310Logo"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/Windows/Wide310x150Logo.png"</span> <span class="na">target=</span><span class="s">"Wide310x150Logo"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/platform&gt;</span>
+</code></pre>
+</div>
+
+<p>Onde o src é o caminho para o ícone que deve ser adicionado.</p>
+
+<p>A plataforma Windows lida com ícones MRT automaticamente, por isso, 
+se você especificar <code class="highlighter-rouge">src="res/windows/storelogo.png"</code> os seguintes arquivos serão copiados para o 
+aplicativo <code class="highlighter-rouge">de imagens</code>, pasta: <code class="highlighter-rouge">res/windows/storelogo.scale-100.png</code>, <code class="highlighter-rouge">res/windows/storelogo.scale-200.png</code>, etc.</p>
+
+<h2 id="windows-phone-8-wp8-platform">Windows Phone 8 (WP8 Platform)</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>   <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"wp8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/wp/ApplicationIcon.png"</span> <span class="na">width=</span><span class="s">"99"</span> <span class="na">height=</span><span class="s">"99"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- tile image --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/wp/Background.png"</span> <span class="na">width=</span><span class="s">"159"</span> <span class="na">height=</span><span class="s">"159"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/platform&gt;</span>
+</code></pre>
+</div>
+
+	</div>
+<footer class="post-footer cyan  darken-4 text-shadown-bottom-cyan  darken-4 border-black">
+	<div class="container">
+		<h2 class="post-title text-shadown-bottom-right-cyan  darken-4">Gostou do blog?</h2>
+		<p class="post-subtitle">Faça uma doação e me ajude a manter as postagens frequentes <3</p>
+		<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+		<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+		<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+		<input type="hidden" name="currency" value="BRL" />
+		<input type="hidden" name="receiverEmail" value="packtudo@gmail.com" />
+		<input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/205x30-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+		</form>
+		<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+	</div>
+</footer>
+<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+		    this.page.url = 'http://packtudo.info/cursos/criando-um-aplicativo-para-celular-com-cordova-parte-3/';  // Replace PAGE_URL with your page's canonical URL variable
+		     his.page.identifier = '/cursos/criando-um-aplicativo-para-celular-com-cordova-parte-3/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		 };	
+		 (function() {  // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+		        
+		     s.src = '//packtudo.disqus.com/embed.js';
+		        
+		    s.setAttribute('data-timestamp', +new Date());
+		    (d.head || d.body).appendChild(s);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
+    </div>
+
+	<script src="/js/materialize.min.js"></script>
+	<script src="/js/init.js"></script>
+	<script src="/js/plugins/smooth-scroll.js"></script>
+	<script src="/js/plugins/detect-mobile.js"></script>
+	<script>
+	    smoothScroll.init();
+	</script>
+	<script type="text/javascript">
+	var color = $(".post-header").css("background-color");
+	if(!isMobile()){
+		$('.post-content > h1').css("color",color).css("transition","color 1s");
+		$('.post-content > h2').css("color",color).css("transition","color 1s");
+		$('.post-content > h3').css("color",color).css("transition","color 1s");
+		$('.post-content p').css("color","black").css("transition","color 1s");
+
+	}else{
+		$('.post-content > h1').css("color",color);
+		$('.post-content > h2').css("color",color);
+		$('.post-content > h3').css("color",color);
+		$('.post-content > p').css("color","black");
+	}
+	</script>
+  </body>
+
+</html>
