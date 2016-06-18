@@ -25,10 +25,15 @@
       </div>
     </div>
   </footer>
-
+<script src="{{"/js/jquery-2.1.1.min.js" | prepend: site.github.baseurl}}"></script>
 <script src="{{"/js/all.js" | prepend: site.github.baseurl}}"></script>
 <script>
     smoothScroll.init();
+</script>
+<script>
+$(".btn-share").click(function(){
+  $(this).parent().find(".btn-share-social").toggle();
+});
 </script>
 
 <div class="super-search" id="js-super-search">
