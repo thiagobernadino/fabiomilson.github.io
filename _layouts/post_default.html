@@ -1,3 +1,6 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
 
@@ -9,6 +12,7 @@
         {{content}}
     </div>
 	<script src="{{"/js/jquery-2.1.1.min.js" | prepend: site.github.baseurl}}"></script>
+	<script src="{{"/js/plugins/detect-mobile.js" | prepend: site.github.baseurl}}"></script>
 	<script src="{{"/js/all.js" | prepend: site.github.baseurl}}"></script>
 	<script>
 	    smoothScroll.init();
