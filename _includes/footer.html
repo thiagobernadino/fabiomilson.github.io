@@ -27,7 +27,14 @@
   </footer>
 <script src="{{"/js/jquery-2.1.1.min.js" | prepend: site.github.baseurl}}"></script>
 <link rel="stylesheet" href="{{ "/fonts/material-icons.css" | prepend: site.baseurl }}">
-<script src="{{"/js/all.js" | prepend: site.github.baseurl}}"></script>
+<!-- build:js -->
+<script src="{{"/js/materialize.min.js" | prepend: site.github.baseurl}}"></script>
+<script src="{{"/js/init.js" | prepend: site.github.baseurl}}"></script>
+<script src="{{"/js/plugins/smooth-scroll.js" | prepend: site.github.baseurl}}"></script>
+<script type="text/javascript" src="{{ "/js/plugins/super-search.js" | prepend: site.github.baseurl }}"></script>
+<script src="{{"/js/plugins/jquery.appear.js" | prepend: site.github.baseurl}}"></script>
+<script src="{{"/js/plugins/skills.js" | prepend: site.github.baseurl}}"></script>
+<!-- endbuild -->
 <script>
     smoothScroll.init();
 </script>
@@ -38,11 +45,27 @@ $(".btn-share").click(function(){
 </script>
 
 <div class="super-search" id="js-super-search">
-<a href="javascript:void(0)" onclick="superSearch.toggle()" class="super-search__close-btn">X</a>
-<input type="text" placeholder="Digite aqui para pesquisar :P" class="super-search__input" id="js-super-search__input">
-<ul class="super-search__results" id="js-super-search__results"></ul>
-</div>
+<a href="javascript:void(0)" onclick="superSearch.toggle()" 
+class="super-search__close-btn">X</a>
+<script>
+  (function() {
+    var cx = '012848334230439945889:lv74swragmg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
 
+<script>
+  $(document).ready(function(){
+    t = $('#js-super-search');
+  });
+</script>
+</div>
 <script>
 superSearch({
 searchFile: '{{ "/feed.xml" | prepend: site.github.baseurl }}'

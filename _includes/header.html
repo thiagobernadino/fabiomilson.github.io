@@ -55,7 +55,7 @@
         <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Anotações" data-scroll>Anotações</a></li>
         <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/portfolio/">Meu portfólio</a></li>
         <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="$('.button-collapse').sideNav('hide');superSearch.toggle();">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
       </ul>
     {% else  %}
     <!-- Menu full -->
@@ -75,7 +75,7 @@
         <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/categorias/#Anotações">Anotações</a></li>
         <li><a itemprop="url" href="{{ base.url | prepend: site.github.baseurl}}/portfolio/">Meu portfólio</a></li>
         <li><a itemprop="url" class="dropdown-button" data-activates="dropdown2" href="#">Faculdade<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a itemprop="url" class="nav-search" onclick="superSearch.toggle();$('.button-collapse').sideNav('hide');">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
+        <li><a itemprop="url" class="nav-search" onclick="$('.button-collapse').sideNav('hide');superSearch.toggle();">Pesquisar <i class="material-icons right nav-search">search</i></a></li>
       </ul>
     {%endif%}
      

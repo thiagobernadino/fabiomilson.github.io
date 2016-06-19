@@ -23,14 +23,17 @@ MIT Licensed
 	transition: 0.2s ease;
 	visibility: hidden;
 	opacity: 0;
+	overflow-y: scroll;
 }
 .super-search__close-btn {
-	fill: #DDD;
-	position: absolute;
-	right: 25px;
-	z-index: 2;
-	font-size: 2.5rem;
-	color: #DA2518;
+    fill: #DDD;
+    position: fixed;
+    /* right: 25px; */
+    bottom: 0;
+    margin: 0 50%;
+    z-index: 2;
+    font-size: 2.5rem;
+    color: #DA2518;
 }
 .super-search__close-btn:hover{
 	color: #637A91;
@@ -82,4 +85,5 @@ MIT Licensed
 .super-search.is-active {
 	opacity: 1;
 	visibility: visible;
+	margin-top: 8px;
 }

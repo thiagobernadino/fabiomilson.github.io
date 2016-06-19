@@ -126,3 +126,18 @@ strong{
     font-weight: 600;
 }
 
+/* Modificações no Search do google */
+table.gsc-search-box td {
+    vertical-align: top !important;
+}
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 10px 10px !important;
+    min-width: 13px !important;
+    margin-top: -10px !important;
+}
+
+.gsib_b{
+    padding: 0px 0px !important;
+}
