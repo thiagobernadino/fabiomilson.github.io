@@ -34,33 +34,38 @@
 <script type="text/javascript" src="{{ "/js/plugins/super-search.js" | prepend: site.github.baseurl }}"></script>
 <script src="{{"/js/plugins/jquery.appear.js" | prepend: site.github.baseurl}}"></script>
 <script src="{{"/js/plugins/skills.js" | prepend: site.github.baseurl}}"></script>
+<script src="{{"/js/plugins/detect-mobile.js" | prepend: site.github.baseurl}}"></script>
 <!-- endbuild -->
 <script>
+  $(document).ready(function(){
+    initBtnShare();
     smoothScroll.init();
+  });
 </script>
 <script>
+function initBtnShare(){
 $(".btn-share").click(function(){
   $(this).parent().find(".btn-share-social").toggle();
 });
-
-$('.pagination').on('click','.p-active > a',function(e){
-  e.preventDefault();
-  $.ajax({
-  url: $(this).attr('href'),
-  type: "GET",  
-  success: function(data) {
-    $("#posts").html(''); 
-    $('.pagination').html('');  
-    console.log($(this).attr('href'));
-    var posts = $(data).find('#posts');
-    var pagination = $(data).find('.pagination'); 
-    console.log($(data).find('#posts') );
-    $("#posts").html(posts);   
-    $(".pagination").html(pagination);   
-  }
-});
-
-})
+}
+</script>
+<script>
+if(!isMobile()){
+  $('.pagination').on('click','.p-active > a',function(e){
+    e.preventDefault();
+    $.ajax({
+    url: $(this).attr('href'),
+    type: "GET",  
+    success: function(data) {
+        $('#posts').empty();
+        $('.pagination').empty();
+        $('#posts').hide().append($(data).find('#posts > .card-index')).fadeIn();
+        $(".pagination").append($(data).find('.pagination'));
+        initBtnShare();
+      }
+    });
+  });
+}
 </script>
 
 <div class="super-search" id="js-super-search">
@@ -79,14 +84,4 @@ class="super-search__close-btn">X</a>
 </script>
 <gcse:search></gcse:search>
 
-<script>
-  $(document).ready(function(){
-    t = $('#js-super-search');
-  });
-</script>
 </div>
-<script>
-superSearch({
-searchFile: '{{ "/feed.xml" | prepend: site.github.baseurl }}'
-});
-</script>
