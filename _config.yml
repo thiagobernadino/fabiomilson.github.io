@@ -45,4 +45,8 @@ exclude: ["_dev",
         "gulpfile.js",
         "node_modules",
         "package.json"]
+
+webserver_headers:
+"Access-Control-Allow-Origin": "*"
+"Server": "CustomServerName"
     
