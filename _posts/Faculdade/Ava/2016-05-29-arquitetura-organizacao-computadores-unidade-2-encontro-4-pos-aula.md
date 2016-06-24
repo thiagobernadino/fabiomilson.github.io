@@ -6,6 +6,7 @@ summary: "Arquitetura e organização de computadores - Pos Aula"
 color: orange
 tags: [Arquitetura e organização de computadores, Anhanguera, AVA]
 category: Faculdade
+image: "/img/post/tumbnails/anhanguera_default.png"
 ---
 
 # Atividade Diagnóstica - U2S3 - Encontro 4 - Pos aula

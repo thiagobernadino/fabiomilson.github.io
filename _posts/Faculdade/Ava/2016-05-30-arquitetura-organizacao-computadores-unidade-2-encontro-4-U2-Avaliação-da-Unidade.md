@@ -6,6 +6,7 @@ summary: "Arquitetura e organização de computadores"
 color: orange
 tags: [Arquitetura e organização de computadores, Anhanguera, AVA]
 category: Faculdade
+image: "/img/post/tumbnails/anhanguera_default.png"
 ---
 
 # U2 - Avaliação da Unidade

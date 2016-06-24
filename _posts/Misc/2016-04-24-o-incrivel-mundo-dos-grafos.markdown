@@ -6,7 +6,7 @@ summary: "O mundo dos grafos de forma resumida por quem cursa S.I"
 color: orange
 tags: [Faculdade,Ciência da Computação, Sistemas de Informação]
 category: Misc
-image: "/img/post/tumbnails/incrivel_mundo_grafos.png"
+image: "/img/post/tumbnails/anhanguera_default.png"
 ---
 # Grafos
 
