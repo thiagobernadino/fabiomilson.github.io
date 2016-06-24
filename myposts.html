@@ -1,12 +1,14 @@
 ---
-permalink: /json/
+permalink: /myPosts/
 ---
 [
   {% for post in site.posts %}
     {
       "title": "{{ post.title }}",
       "category": "{{ post.category }}",
-      "url": "{{ post.url }}"
+      "summary": "{{post.summary}}",
+      "image": "{{post.image}}",
+      "url": "{{site.url}}/{{ post.url }}"
     }
     {% unless forloop.last %},{% endunless %}
   {% endfor %}
