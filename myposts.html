@@ -7,7 +7,7 @@ permalink: /myposts/
       "title": "{{ post.title }}",
       "category": "{{ post.category }}",
       "summary": "{{post.summary}}",
-      "image": "{{post.image}}",
+      "image": "{{site.url}}{{post.image}}",
       "url": "{{site.url}}{{ post.url }}"
     }
     {% unless forloop.last %},{% endunless %}
