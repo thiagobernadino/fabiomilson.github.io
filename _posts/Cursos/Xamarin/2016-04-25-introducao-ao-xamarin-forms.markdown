@@ -3,16 +3,16 @@ title: Introdução ao Xamarin Forms
 layout: post
 date: 2016-04-25 12:38:51 -0300
 summary: "Introdução ao mundo Xamarin com C#"
-description: "Pequeno curso disponibilizado de forma gratuita para amantes da tecnologia <3"
+description: "Pequeno curso disponibilizado de forma gratuita para amantes da tecnologia."
 color: blue
 tags: [Youtube,Xamarin,Desenvolvimento Mobile]
 category: Cursos
-image: "/img/post/tumbnails/introducao_xamarin.png"
+image: "/img/post/tumbnails/xamarin_default.png"
 ---
 
 # Introdução ao mundo do Xamarin forms
 
-Então pessoal, sejam bem vindos a um pequeno curso que estou iniciando em [meu canal do youtube](http://youtube.com/packtudo){: .external-link}{: target="_blank"} com o intuito de ensinar Xamarin forms para iniciantes, vale ressaltar que também sou iniciante mas como já possuo uma bagagem nas costas consigo aprender mais rapidamente uma nova tecnologia sendo assim fique a vontade para compartilhar conhecimentos na seção de comentários no final desse post <3.
+Então pessoal, sejam bem vindos a um pequeno curso que estou iniciando em [meu canal do youtube](http://youtube.com/packtudo){: .external-link}{: target="_blank"} com o intuito de ensinar Xamarin forms para iniciantes, vale ressaltar que também sou iniciante mas como já possuo uma bagagem nas costas consigo aprender mais rapidamente uma nova tecnologia sendo assim fique a vontade para compartilhar conhecimentos na seção de comentários no final desse post.
 
 Este post acompanha a primeira aula de Xamarin no canal, caso deseje assistir a aula de forma totalmente gratuita, [basta clicar neste link](https://www.youtube.com/watch?v=-F9w2JKjGKw){: .external-link}{: target="_blank"}.
 
