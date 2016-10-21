@@ -11,7 +11,7 @@ email: packtudo@gmail.com
 description: "Este é um site feito por desenvolvedor apaixonado por tecnologia com a intenção
   de compartilhar todo o conhecimento adquirido por ele até então :)"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://packtudo.info" # the base hostname & protocol for your site
+url: "http://fabiomilson.github.io" # the base hostname & protocol for your site
 twitter_username: packtudo
 github_url:  "https://github.com/fabiomilson"
 youtube_url: "http://youtube.com/packtudo"
